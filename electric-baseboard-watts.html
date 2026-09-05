@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</title>
+<meta name="description" content="Electric baseboard sizing: 7–10 watts per square foot rule, the watts = BTU/hr ÷ 3.41 conversion, room-by-room wattage table, 120 vs 240 V circuits, and placement tips along exterior walls.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/hvacloadcalc/electric-baseboard-watts.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Electric Baseboard Watts Per Square Foot — Sizing Guide">
+<meta property="og:description" content="The 7–10 W/sq ft rule, the ÷3.41 BTU conversion, worked room examples, and circuit math at 240 V.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many watts of electric baseboard heat do I need per square foot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Plan on 7–10 watts per square foot. Use about 10 W/sq ft for poor insulation, cold climates, or ceilings over 8 feet, and closer to 7 for tight, well-insulated rooms in moderate climates. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts total, often split across two heaters." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert BTU/hr to watts for heating?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide BTU/hr by 3.41 — one watt equals about 3.41 BTU/hr. A 1,500 W space heater produces about 5,115 BTU/hr; a 10,000 BTU/hr heat load needs about 2,933 watts of electric resistance heat. Always round up to the available heater sizes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should electric baseboard be 120V or 240V?",
+      "acceptedAnswer": { "@type": "Answer", "text": "240V for anything over about 1,000 watts. At the same wattage, 240 V draws half the amps of 120 V — a 2,000 W heater pulls 16.7 A at 120 V (needs a 20 A circuit alone) versus 8.3 A at 240 V, which pairs comfortably with a 15 A circuit. Nearly all fixed baseboard in North America is 240 V." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="mini-split-room-size.html">Mini-split by room</a>
+    <a href="duct-cfm-chart.html">Duct CFM guide</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>How many watts of electric baseboard heat per square foot?</h1>
+<p class="sub">Short answer: 7–10 watts per square foot, adjusted for insulation and climate. Here's the full math, the conversion, and the circuit side.</p>
+
+<h2>The rule and the conversion behind it</h2>
+<p>Electric resistance heat delivers 3.41 BTU/hr per watt — that's physics, not efficiency marketing, and it's why every resistance heater is 100% "efficient" at the wall. Working backward from the rule-of-thumb heat load of 20–30 BTU/sq ft gives the heating-side rule: <strong>watts = BTU/hr ÷ 3.41</strong>, landing at roughly <strong>7–10 W per square foot</strong>.</p>
+<div class="tbl-wrap">
+<table>
+<tr><th>Condition</th><th>W/sq ft target</th></tr>
+<tr><td>Tight, well-insulated room, moderate climate</td><td class="num">7</td></tr>
+<tr><td>Typical older home, average insulation</td><td class="num">8–9</td></tr>
+<tr><td>Poor insulation, single-pane windows, cold climate</td><td class="num">10</td></tr>
+<tr><td>Ceilings above 8 ft</td><td class="num">+1 per extra 2 ft</td></tr>
+</table>
+</div>
+
+<h2>Worked rooms</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Room</th><th class="num">Sq ft</th><th class="num">Watts needed</th><th class="num">Typical install</th></tr>
+<tr><td>Bedroom 12×12</td><td class="num">144</td><td class="num">1,000–1,450</td><td class="num">1× 1,250 W or 2× 750 W</td></tr>
+<tr><td>Bedroom 12×15</td><td class="num">180</td><td class="num">1,250–1,800</td><td class="num">2× 1,000 W</td></tr>
+<tr><td>Living room 15×20</td><td class="num">300</td><td class="num">2,100–3,000</td><td class="num">2× 1,500 W on exterior walls</td></tr>
+<tr><td>Basement room 10×12</td><td class="num">120</td><td class="num">1,200 (use 10 W/sq ft)</td><td class="num">1× 1,250 W</td></tr>
+</table>
+</div>
+<p>Standard baseboard heaters produce roughly <strong>200–250 W per linear foot</strong> — a 6-ft heater is about 1,500 W. Total your room's watts, then divide into heater lengths that fit clear wall runs.</p>
+
+<h2>Placement: half the comfort is here</h2>
+<p>Baseboard works by convection along the cold surface it's mounted on. Mount it on <strong>exterior walls, ideally under windows</strong> — the falling cold air from the glass feeds the convection loop. Keep 12 inches of clear space above, never under towel bars or curtains, and never below receptacles (code prohibits outlets above baseboard). Two shorter heaters beat one long one in L-shaped rooms.</p>
+
+<h2>120 vs 240 V and the circuit math</h2>
+<p>Amps = watts ÷ volts. A 2,000 W room pulls <strong>16.7 A at 120 V</strong> but only <strong>8.3 A at 240 V</strong>. With the NEC continuous-load rule (heaters count as continuous, so use no more than 80% of the breaker):</p>
+<div class="tbl-wrap">
+<table>
+<tr><th>Circuit</th><th class="num">Max heater watts, 240 V</th><th class="num">Max heater watts, 120 V</th></tr>
+<tr><td>15 A</td><td class="num">2,880</td><td class="num">1,440</td></tr>
+<tr><td>20 A</td><td class="num">3,840</td><td class="num">1,920</td></tr>
+</table>
+</div>
+<p>This is why nearly all fixed baseboard is 240 V — one circuit covers a normal room with headroom. Thermostats for baseboard are line-voltage (carrying full circuit current), not the low-voltage kind from central systems.</p>
+
+<h2>The running-cost truth</h2>
+<p>Resistance heat is cheap to install and expensive to run: 2,000 W for 8 hours is 16 kWh — about $2/day at $0.13/kWh, every cold day all winter. Baseboard suits rooms used a few hours a day with their own thermostat. If you're heating a whole house on resistance, price a heat pump mini-split (3× the heat per kWh) before you buy panels — see the <a href="mini-split-room-size.html">mini-split sizing guide</a>.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">Once you've sized the room: standard 240 V baseboard heaters by wattage class, line-voltage smart thermostats (Mysa-style) that schedule rooms down when empty, and heater covers that look better than the originals. <!-- AFFILIATE SLOT: Amazon Associates — baseboard heaters, line-voltage smart thermostats, heater covers --></p>
+</div>
+<p class="small">Need an electrician for the circuit work? <!-- AFFILIATE SLOT: electrician lead-gen widget (later) --></p>
+
+<div class="disclaim">
+<b>Honest label:</b> watts-per-square-foot is a rule-of-thumb planning estimate, not a heat-loss calculation. Circuit sizing, wire gauge, and breaker selection belong to a licensed electrician per NEC Article 220 — this page doesn't replace either.
+</div>
+
+<p>Run your exact room in the <a href="index.html#calc">baseboard watts calculator</a>.</p>
+</main>
+
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

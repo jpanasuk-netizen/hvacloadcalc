@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Load Calculator — Room BTU, Mini-Split Size, Duct CFM, Baseboard Watts (2026)</title>
+<meta name="description" content="Free HVAC load calculator: rule-of-thumb room BTU sizing with ceiling height, window, sun, and insulation factors — plus mini-split size, duct CFM (BTU ÷ ΔT × 1.08), and electric baseboard watts. Manual-J-inspired, honestly labeled.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/hvacloadcalc/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="HVAC Load Calculator — What Size HVAC Do I Need?">
+<meta property="og:description" content="Room-by-room BTU sizing, mini-split head selection, duct CFM, and electric baseboard watts — Manual-J-inspired rule-of-thumb math, free, no signup.">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/hvacloadcalc/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HVACLoadCalc HVAC Load Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "url": "https://jpanasuk-netizen.github.io/hvacloadcalc/",
+  "description": "Free HVAC load calculator: Manual-J-inspired rule-of-thumb room BTU sizing (square footage with ceiling height, window, sun, and insulation factors), mini-split head selection by zone, duct CFM from the sensible-heat formula, and electric baseboard wattage.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many BTU do I need per square foot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The rule of thumb is 20–30 BTU/hr per square foot of living space, with 25 as a reasonable middle for a typical 8-foot-ceiling room in a moderate climate. Then adjust: sunny rooms +15%, shaded rooms −10%, poor insulation +25%, good insulation −15%, each window adds about 600 BTU/hr, and multiply by ceiling height ÷ 8. Add a 10% safety margin and round up to the nearest 500 BTU." }
+    },
+    {
+      "@type": "Question",
+      "name": "What size mini-split do I need for my room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard mini-split indoor heads come in 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr sizes. Size to the nearest head at or above your calculated load — roughly 9k for a 300–400 sq ft bedroom, 12k for a 450–550 sq ft living room, 18k for a 750–850 sq ft open area. Don't oversize more than about 30%: an oversized unit short-cycles and dehumidifies poorly." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate duct CFM from BTU?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) ≈ 1,111 CFM, which matches the ~400 CFM per ton rule of thumb." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many watts of electric baseboard heat do I need per square foot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="#calc">Calculator</a>
+    <a href="mini-split-room-size.html">Mini-split by room</a>
+    <a href="electric-baseboard-watts.html">Baseboard watts</a>
+    <a href="duct-cfm-chart.html">Duct CFM guide</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>HVAC load calculator</h1>
+<p class="sub">Room-by-room BTU, mini-split size, duct CFM, and baseboard watts — Manual-J-inspired rule-of-thumb math that shows its work. Free, no signup.</p>
+
+<div class="disclaim">
+  <b>Honest label:</b> this is a <strong>rule-of-thumb planning tool</strong>, not a full ACCA Manual J calculation. It uses the standard 20–30 BTU/sq ft baseline with published adjustment factors. Fine for picking equipment size classes and planning — for final equipment selection in extreme climates or unusual homes, have a contractor run a real Manual J.
+</div>
+
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-btu', this)">Room BTU</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-ms', this)">Mini-split size</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-duct', this)">Duct CFM</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-bb', this)">Baseboard watts</button>
+</div>
+
+<!-- ============ 1. ROOM BTU (MANUAL-J-LITE) ============ -->
+<section id="tab-btu" class="panel active" role="tabpanel">
+  <p>Size one room: baseline load from square footage, then adjusted for the things that actually move the number.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="rmSqft">Room size (sq ft)</label>
+      <input type="number" id="rmSqft" placeholder="e.g. 300" min="1">
+    </div>
+    <div class="field">
+      <label for="rmHt">Ceiling height (ft)</label>
+      <input type="number" id="rmHt" value="8" min="6" max="20" step="0.5">
+    </div>
+    <div class="field">
+      <label for="rmWin">Windows</label>
+      <input type="number" id="rmWin" value="2" min="0" max="12">
+    </div>
+    <div class="field">
+      <label for="rmSun">Sun exposure</label>
+      <select id="rmSun">
+        <option value="shaded">Shaded (north side, big trees)</option>
+        <option value="average" selected>Average</option>
+        <option value="sunny">Very sunny (west/south, no shade)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="rmIns">Insulation quality</label>
+      <select id="rmIns">
+        <option value="good">Good (modern code, air-sealed)</option>
+        <option value="average" selected>Average (typical older home)</option>
+        <option value="poor">Poor (pre-1980, drafty, single pane)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="rmDir">Room use</label>
+      <select id="rmDir">
+        <option value="bedroom">Bedroom</option>
+        <option value="living" selected>Living room / open area</option>
+        <option value="kitchen">Kitchen (appliances add heat)</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="calcRoomBTU()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate room BTU</button>
+  <div id="rmResult" class="ans" hidden></div>
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">Once you know the BTU, matched equipment on Amazon: window ACs up to 12k BTU, portable ACs, and smart thermostats that keep the room on schedule. <!-- AFFILIATE SLOT: Amazon Associates product links keyed to calculated BTU class --></p>
+  </div>
+</section>
+
+<!-- ============ 2. MINI-SPLIT SIZE ============ -->
+<section id="tab-ms" class="panel" role="tabpanel">
+  <p>Mini-splits come in fixed head sizes: 9k, 12k, 15k, 18k, 24k, 30k, 36k BTU/hr. Enter the space and zones, get the head size to buy.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="msZones">Zones (indoor heads)</label>
+      <select id="msZones"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+    </div>
+    <div class="field">
+      <label for="msSqft">Total conditioned area (sq ft)</label>
+      <input type="number" id="msSqft" placeholder="e.g. 550" min="1">
+    </div>
+    <div class="field">
+      <label for="msHt">Ceiling height (ft)</label>
+      <input type="number" id="msHt" value="8" min="6" max="20" step="0.5">
+    </div>
+    <div class="field">
+      <label for="msWin">Windows (total)</label>
+      <input type="number" id="msWin" value="3" min="0" max="20">
+    </div>
+    <div class="field">
+      <label for="msSun">Sun exposure</label>
+      <select id="msSun">
+        <option value="shaded">Shaded</option>
+        <option value="average" selected>Average</option>
+        <option value="sunny">Very sunny</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="msIns">Insulation quality</label>
+      <select id="msIns">
+        <option value="good">Good</option>
+        <option value="average" selected>Average</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="calcMiniSplit()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my mini-split</button>
+  <div id="msResult" class="ans" hidden></div>
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">The 12k BTU single-zone class is the bestseller for a reason — it covers most bedrooms and mid-size living areas. DIY-friendly Mr Cool-style units vs pro-install brands differ mainly on refrigerant line prep. <!-- AFFILIATE SLOT: Amazon Associates — mini-split units by size class, line-set kits, wall brackets --></p>
+  </div>
+</section>
+
+<!-- ============ 3. DUCT CFM ============ -->
+<section id="tab-duct" class="panel" role="tabpanel">
+  <p>From equipment size to airflow: CFM = BTU/hr ÷ (ΔT × 1.08). This is the number your trunk duct has to carry.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="dcBtu">Equipment rating (BTU/hr)</label>
+      <input type="number" id="dcBtu" placeholder="e.g. 24000" min="1">
+    </div>
+    <div class="field">
+      <label for="dcDt">Temperature split ΔT (°F)</label>
+      <input type="number" id="dcDt" value="20" min="5" max="60">
+    </div>
+    <div class="field">
+      <label for="dcRooms">Number of supply runs</label>
+      <input type="number" id="dcRooms" value="6" min="1" max="30">
+    </div>
+  </div>
+  <button onclick="calcDuct()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate CFM</button>
+  <div id="dcResult" class="ans" hidden></div>
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">Checking your own system's airflow? A clamp meter + anemometer kit and a good manometer are the pro tools for measuring what's actually moving. <!-- AFFILIATE SLOT: Amazon Associates — HVAC gauges, anemometers, manometers, flex duct --></p>
+  </div>
+</section>
+
+<!-- ============ 4. ELECTRIC BASEBOARD ============ -->
+<section id="tab-bb" class="panel" role="tabpanel">
+  <p>Electric baseboard is sized in watts: watts = BTU/hr ÷ 3.41. Rule of thumb: 7–10 W per sq ft, adjusted for insulation and climate.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="bbSqft">Room size (sq ft)</label>
+      <input type="number" id="bbSqft" placeholder="e.g. 180" min="1">
+    </div>
+    <div class="field">
+      <label for="bbIns">Insulation quality</label>
+      <select id="bbIns">
+        <option value="good">Good</option>
+        <option value="average" selected>Average</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="bbV">Circuit voltage</label>
+      <select id="bbV"><option>120</option><option selected>240</option></select>
+    </div>
+    <div class="field">
+      <label for="bbCold">Cold climate (below ~10°F design)?</label>
+      <select id="bbCold"><option value="no">No</option><option value="yes">Yes (+10%)</option></select>
+    </div>
+  </div>
+  <button onclick="calcBaseboard()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate baseboard watts</button>
+  <div id="bbResult" class="ans" hidden></div>
+  <p class="small">Circuit work belongs to an electrician — find one locally. <!-- AFFILIATE SLOT: electrician lead-gen widget (later) --></p>
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">Smart thermostats for electric baseboard (Mysa-style line-voltage models) pay for themselves on scheduling alone. <!-- AFFILIATE SLOT: Amazon Associates — line-voltage smart thermostats, baseboard heaters --></p>
+  </div>
+</section>
+
+<!-- ============ CONTENT ============ -->
+<h2>How the sizing math works</h2>
+<p>Every tab here is built on the same skeleton, borrowed from ACCA Manual J and simplified to the inputs that move the number most. The baseline is the industry rule of thumb: <strong>20–30 BTU/hr per square foot</strong> of cooling, with 25 as the middle. From there the calculators apply four published adjustment factors:</p>
+<div class="tbl-wrap">
+<table>
+<tr><th>Factor</th><th>Adjustment</th></tr>
+<tr><td>Ceiling height</td><td>multiply by height ÷ 8 (a 10 ft ceiling adds 25%)</td></tr>
+<tr><td>Sun exposure</td><td>very sunny ×1.15 · average ×1.0 · shaded ×0.90</td></tr>
+<tr><td>Insulation</td><td>poor ×1.25 · average ×1.0 · good ×0.85</td></tr>
+<tr><td>Windows</td><td>+600 BTU/hr each (single- to double-pane typical)</td></tr>
+</table>
+</div>
+<p>Then a 10% equipment safety margin, rounded up to the nearest 500 BTU — matching how equipment is actually sold.</p>
+
+<h2>Quick reference: BTU by room size</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Room</th><th class="num">Sq ft</th><th class="num">Typical BTU/hr</th><th class="num">Mini-split head</th></tr>
+<tr><td>Bedroom</td><td class="num">130–180</td><td class="num">4,000–6,000</td><td class="num">9k</td></tr>
+<tr><td>Large bedroom / office</td><td class="num">200–300</td><td class="num">6,000–9,000</td><td class="num">9k</td></tr>
+<tr><td>Living room, average</td><td class="num">350–500</td><td class="num">10,000–14,000</td><td class="num">12k</td></tr>
+<tr><td>Great room / open plan</td><td class="num">600–800</td><td class="num">17,000–23,000</td><td class="num">18k–24k</td></tr>
+<tr><td>Whole small apartment</td><td class="num">800–1,200</td><td class="num">23,000–34,000</td><td class="num">24k–36k multi-zone</td></tr>
+</table>
+</div>
+<p class="small">Assumes 8 ft ceilings, average sun and insulation. Real houses vary — that's what the calculators above are for.</p>
+
+<h2>Why oversizing is the #1 DIY mistake</h2>
+<p>Bigger feels safer and isn't. An AC that's too big cools the air fast, shuts off before it has dehumidified anything, and you get a cold clammy room plus compressor short-cycling that kills the equipment years early. Inverter mini-splits modulate and forgive some oversizing, but past ~30% above load you're paying for capacity you can't use. Undersizing, by contrast, just means the unit runs longer on the worst days — cheaper mistake.</p>
+
+<h2>Guides</h2>
+<div class="card"><h3><a href="mini-split-room-size.html">What size mini-split for each room?</a></h3><p>Head-by-head sizing from bedrooms to great rooms, multi-zone vs single-zone economics, and the 9k BTU workhorse.</p></div>
+<div class="card"><h3><a href="electric-baseboard-watts.html">How many watts of electric baseboard per square foot?</a></h3><p>The 7–10 W/sq ft rule, the ÷3.41 conversion, placement along exterior walls, and 120 vs 240 V circuits.</p></div>
+<div class="card"><h3><a href="duct-cfm-chart.html">Duct CFM: the BTU ÷ (ΔT × 1.08) guide</a></h3><p>Worked CFM charts by tonnage, ΔT by equipment type, per-run airflow, and where Manual D takes over.</p></div>
+<div class="card"><h3><a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer ↗</a></h3><p>Sister calculators from the same network: backup power, solar sizing, welding duty cycles, and battery banks.</p></div>
+</main>
+
+<footer>HVACLoadCalc · free HVAC sizing tools for homeowners and DIYers · pages may contain affiliate links · estimates are rule-of-thumb and not a substitute for a full ACCA Manual J · <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# HVACLoadCalc
+> Free HVAC sizing tools: Manual-J-inspired rule-of-thumb room BTU calculator (square footage with ceiling height, window, sun, and insulation factors), mini-split head sizing by zone, duct CFM from the sensible-heat formula (CFM = BTU/hr ÷ (ΔT × 1.08)), and electric baseboard wattage (watts = BTU/hr ÷ 3.41). Part of the GeneratorSizer calculator network. Maintained by an agent-operated office with human review.
+
+## Core pages
+- [HVAC Load Calculator](https://jpanasuk-netizen.github.io/hvacloadcalc/): the hub — room-by-room BTU sizing, mini-split head selection, duct CFM, and baseboard watts across 4 tabs, with a quick-reference BTU-by-room table
+- [Mini-Split Room Size Guide](https://jpanasuk-netizen.github.io/hvacloadcalc/mini-split-room-size.html): 9k–36k head sizes matched to real rooms, multi-zone vs single-zone economics, the oversizing trap
+- [Electric Baseboard Watts](https://jpanasuk-netizen.github.io/hvacloadcalc/electric-baseboard-watts.html): the 7–10 W/sq ft rule, BTU→watt conversion, 120 vs 240 V circuit math, placement
+- [Duct CFM Guide](https://jpanasuk-netizen.github.io/hvacloadcalc/duct-cfm-chart.html): worked CFM charts by tonnage and ΔT, per-run airflow, branch duct capacity table
+
+## Related (sister sites)
+- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator sizing by appliance loads, runtime, and fuel burn
+- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): solar array and battery sizing
+- [WeldingCalc](https://jpanasuk-netizen.github.io/weldingcalc/): welding amperage, duty cycle, and circuit sizing
+- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): LiFePO4/AGM bank sizing for off-grid setups
+
+## Use policy
+Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.

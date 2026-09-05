@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duct CFM Calculator &amp; Chart — BTU ÷ (ΔT × 1.08), Worked by Tonnage (2026)</title>
+<meta name="description" content="Duct CFM from the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08). Worked charts by tonnage and ΔT, per-run airflow, CFM per ton sanity checks, and where ACCA Manual D takes over.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/hvacloadcalc/duct-cfm-chart.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Duct CFM Chart — the BTU ÷ (ΔT × 1.08) Guide">
+<meta property="og:description" content="Worked CFM charts by tonnage and temperature split, per-run airflow, and how CFM connects to duct size.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many CFM per ton of air conditioning?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The rule of thumb is about 400 CFM per ton of cooling — 2 tons ≈ 800 CFM, 3 tons ≈ 1,200 CFM. Dry climates often run lower (300–350 CFM/ton) to get a colder, drier supply; humid climates run higher (400–450) for better dehumidification. It follows directly from CFM = BTU/hr ÷ (ΔT × 1.08) at a 20°F split." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate duct CFM from BTU?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature difference and 1.08 is a constant (0.075 lb/cu ft air density × 0.24 BTU/lb-°F specific heat × 60 min/hr). A 24,000 BTU/hr system at ΔT 20 needs 24,000 ÷ 21.6 ≈ 1,111 CFM." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CFM tell me what duct diameter to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not by itself. CFM is the airflow requirement; duct diameter comes from friction rate, duct material, and available static pressure — the domain of ACCA Manual D. As a sanity anchor only, a main trunk at 1,000 CFM wants roughly a 12–14 inch round duct or equivalent rectangular at typical residential friction rates; anything real should be duct-designed, not guessed." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="mini-split-room-size.html">Mini-split by room</a>
+    <a href="electric-baseboard-watts.html">Baseboard watts</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>Duct CFM: the BTU ÷ (ΔT × 1.08) guide</h1>
+<p class="sub">One formula turns equipment size into the airflow your ducts must carry — with the worked numbers for every common system size.</p>
+
+<h2>The formula</h2>
+<p><code>CFM = BTU/hr ÷ (ΔT × 1.08)</code>. The 1.08 constant is air's heat-carrying capacity at sea level (0.075 lb/cu ft density × 0.24 BTU/lb-°F × 60 min/hr). ΔT is the temperature split between supply and return air — the amount the equipment heats or cools the air in one pass.</p>
+<p>Worked example: a 2-ton (24,000 BTU/hr) AC at a typical cooling ΔT of 27–28°F: CFM = 24,000 ÷ (28 × 1.08) ≈ 794 CFM — which is exactly where the industry shorthand of ~400 CFM per ton comes from. Setups with a smaller split (20°F) run more CFM per ton; drier-coil designs with a bigger split run less. Your equipment's spec sheet and measured split settle it.</p>
+
+<h2>CFM by tonnage, at the usual ΔTs</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>System</th><th class="num">ΔT 20°F</th><th class="num">ΔT 25°F</th><th class="num">ΔT 30°F</th></tr>
+<tr><td>1.5 ton (18,000 BTU/hr)</td><td class="num">833</td><td class="num">667</td><td class="num">556</td></tr>
+<tr><td>2 ton (24,000 BTU/hr)</td><td class="num">1,111</td><td class="num">889</td><td class="num">741</td></tr>
+<tr><td>2.5 ton (30,000 BTU/hr)</td><td class="num">1,389</td><td class="num">1,111</td><td class="num">926</td></tr>
+<tr><td>3 ton (36,000 BTU/hr)</td><td class="num">1,667</td><td class="num">1,333</td><td class="num">1,111</td></tr>
+<tr><td>4 ton (48,000 BTU/hr)</td><td class="num">2,222</td><td class="num">1,778</td><td class="num">1,481</td></tr>
+<tr><td>5 ton (60,000 BTU/hr)</td><td class="num">2,778</td><td class="num">2,222</td><td class="num">1,852</td></tr>
+</table>
+</div>
+<p class="small">Heating with a gas furnace? ΔT is much larger — 40–60°F is normal, so a 60,000 BTU/hr furnace at ΔT 50 needs only 1,111 CFM. Heat pumps sit near 20–25°F in heating.</p>
+
+<h2>Per-run airflow</h2>
+<p>Divide total CFM by the number of supply runs to sanity-check the branch layout. At 1,200 CFM across 8 runs, each branch carries 150 CFM — typical residential branches at 6–7 inch round carry 100–150 CFM. If your per-run number forces 8-inch branches everywhere, the trunk is starved or the run count is too low.</p>
+<div class="tbl-wrap">
+<table>
+<tr><th>Duct (round, typical residential)</th><th class="num">Carries, approx CFM</th></tr>
+<tr><td>5 inch branch</td><td class="num">60–80</td></tr>
+<tr><td>6 inch branch</td><td class="num">100</td></tr>
+<tr><td>7 inch branch</td><td class="num">150</td></tr>
+<tr><td>8 inch branch</td><td class="num">200</td></tr>
+<tr><td>12 inch trunk</td><td class="num">800–1,000</td></tr>
+<tr><td>14 inch trunk</td><td class="num">1,200–1,400</td></tr>
+</table>
+</div>
+
+<h2>Diagnosing an existing system</h2>
+<p>Measure supply and return temps a few feet from the equipment with a probe thermometer. Cooling split much under 16°F usually means low airflow (dirty coil/filter, undersized returns); much over 22°F on AC suggests low charge or, in humid climates, deliberately low airflow for dehumidification. The formula runs both directions — measured CFM × ΔT × 1.08 gives you delivered BTU/hr.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">Measuring your own system: a dual-probe thermometer, a vane anemometer for register velocity, and a static-pressure manometer are the three tools techs actually use. <!-- AFFILIATE SLOT: Amazon Associates — anemometers, manometers, dual-probe thermometers, duct boost fans --></p>
+</div>
+
+<div class="disclaim">
+<b>Honest label:</b> CFM is the airflow target, not a duct design. Sizing actual ducts — friction rates, equivalent lengths, available static pressure — is ACCA Manual D territory, and blower specs must match the external static pressure of your system. Use these numbers to plan and sanity-check, not to cut sheet metal.
+</div>
+
+<p>Size the equipment first in the <a href="index.html#calc">HVAC load calculator</a>, then work its BTU through the CFM calculator above.</p>
+</main>
+
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
