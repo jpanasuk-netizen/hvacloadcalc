@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jpanasuk-netizen.github.io/hvacloadcalc/sitemap.xml
+Sitemap: https://hvac-load-calc.com/sitemap.xml
