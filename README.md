@@ -20,5 +20,5 @@ All copy labels this as a rule-of-thumb planning tool, not a substitute for full
 ## Smoke test
 `node smoke-test.js` — runs every calculator through hand-verified cases (no DOM needed).
 
-Target URL: https://jpanasuk-netizen.github.io/hvacloadcalc/
+Target URL: https://hvac-load-calc.com/
 Do NOT git init / push / publish without Jeremy's approval (see LAUNCH_CHECKLIST.md).

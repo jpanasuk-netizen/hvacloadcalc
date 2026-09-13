@@ -5,13 +5,13 @@ Pattern cloned from: `HermesVault/40-Content/sites/generatorsizer/` (dark mobile
 
 ## 0. Pre-launch (before anything public)
 - [ ] Jeremy approves publish (charter human gate — no live URL without his yes)
-- [ ] Canonical/og:url/sitemap/robots all point at `https://jpanasuk-netizen.github.io/hvacloadcalc/` (they already do — re-check if a custom domain is added later)
+- [ ] Canonical/og:url/sitemap/robots all point at `https://hvac-load-calc.com/` (they already do — re-check if a custom domain is added later)
 - [ ] Verify rule-of-thumb figures (20–30 BTU/sq ft, 600 BTU/window, 7–10 W/sq ft, 1.08 constant) against a current ACCA Manual J summary — figures are labeled as rule-of-thumb, not Manual J results
 - [ ] Affiliate timing: apply to programs BEFORE adding real links; slots are marked `<!-- AFFILIATE SLOT -->` in index.html + all 3 articles
 
 ## 1. Hosting — GitHub Pages ($0)
 - [ ] Create repo `jpanasuk-netizen/hvacloadcalc` (public), push folder contents to `main`
-- [ ] Settings → Pages → Deploy from branch: `main` / root → confirm `https://jpanasuk-netizen.github.io/hvacloadcalc/`
+- [ ] Settings → Pages → Deploy from branch: `main` / root → confirm `https://hvac-load-calc.com/`
 - [ ] Mirror to Hugging Face Space (sdk: static) — matches the packet-twin pattern
 
 ## 2. Search Console
