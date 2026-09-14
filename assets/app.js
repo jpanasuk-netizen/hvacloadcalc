@@ -111,6 +111,7 @@ function calcRoomBTU(){
     '</div>'+
     '<p class="note">Rule-of-thumb baseline of '+BASE_BTU_SQFT+' BTU/sq ft adjusted for sun ('+sun+': ×'+SUN_FACTORS[sun]+'), insulation ('+ins+': ×'+INSUL_FACTORS[ins]+'), '+wins+' window(s) at +'+WINDOW_BTU+' BTU each, plus a 10% safety margin. <strong>This is not a full ACCA Manual J — it is a planning estimate.</strong> For final equipment selection in extreme climates or homes with unusual envelope conditions, have a contractor run Manual J (ACCA-approved software).</p>';
   var box = el("rmResult"); box.hidden = false; box.innerHTML = html;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(btu, 'room');
 }
 
 /* ---------- 2. Mini-split sizing ---------- */
@@ -140,6 +141,7 @@ function calcMiniSplit(){
     '</div>'+
     '<p class="note">'+headTxt+'. Don\'t oversize: an inverter mini-split modulates, but a unit more than ~30% above load short-cycles, dehumidifies poorly, and wastes money. Standard head sizes: 9k, 12k, 15k, 18k, 24k, 30k, 36k BTU. <strong>Planning estimate only — not a substitute for a Manual J report.</strong></p>';
   var box = el("msResult"); box.hidden = false; box.innerHTML = html;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(rec.size || need, 'minisplit');
 }
 
 /* ---------- 3. Duct CFM ---------- */
@@ -159,6 +161,7 @@ function calcDuct(){
     '</div>'+
     '<p class="note">Formula: CFM = BTU/hr ÷ (ΔT × 1.08), the standard sensible-heat airflow equation. A ΔT of 20°F is typical for cooling; heat pumps often run 20–25°F, gas furnaces 40–60°F. Trunk and branch ducts also need friction-rate sizing — this number is the starting point, not the duct diameter. <strong>Estimate only — not a substitute for ACCA Manual D duct design.</strong></p>';
   var box = el("dcResult"); box.hidden = false; box.innerHTML = html;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(1, 'duct');
 }
 
 /* ---------- 4. Electric baseboard ---------- */
@@ -183,6 +186,7 @@ function calcBaseboard(){
     '</div>'+
     '<p class="note">Formula: watts = BTU/hr ÷ 3.41. Install along exterior walls, under windows where possible, and never under towel bars or outlets. Circuit sizing and wiring are electrician territory — <strong>this wattage is a planning estimate, not a substitute for a heat-loss calculation or load calculation (NEC Article 220).</strong></p>';
   var box = el("bbResult"); box.hidden = false; box.innerHTML = html;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(plan.watts, 'baseboard');
 }
 
 /* ---------- node export for smoke tests ---------- */
