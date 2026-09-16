@@ -15,3 +15,10 @@
 
 ## Use policy
 Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
+
+## Topic map
+- [HVACLoadCalc topic map](https://hvac-load-calc.com/topics.html): Room-by-room HVAC sizing for DIY mini-split installs.
+- **Room BTU:** [HVAC load calculator](https://hvac-load-calc.com/), [BTU room chart](https://hvac-load-calc.com/magnet.html), [BTU per square foot](https://hvac-load-calc.com/how-many-btu-per-square-foot.html)
+- **Mini-split heads:** [Mini-split by room](https://hvac-load-calc.com/mini-split-room-size.html)
+- **Whole-home size:** [AC for 1,000 sq ft](https://hvac-load-calc.com/what-size-ac-unit-for-1000-sq-ft.html)
+- **Distribution:** [Duct CFM chart](https://hvac-load-calc.com/duct-cfm-chart.html), [Baseboard watts](https://hvac-load-calc.com/electric-baseboard-watts.html)
