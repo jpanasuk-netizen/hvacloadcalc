@@ -270,7 +270,16 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </section>
 
 <!-- ============ CONTENT ============ -->
-<h2>How the sizing math works</h2>
+<aside id="key-takeaways" class="card" aria-label="Key takeaways" style="margin:1.5rem 0">
+<h2 style="margin-top:0">Key takeaways</h2>
+<ul>
+<li>Start at <strong>20–30 BTU/hr per square foot</strong> (25 is the middle), then adjust for ceiling height, sun, insulation, and windows (+600 BTU/hr each).</li>
+<li>Add a <strong>10% safety margin</strong> and round up to the nearest 500 BTU.</li>
+<li>Size a mini-split to the nearest head <strong>at or above</strong> your load; past about 30% oversized, it short-cycles and dehumidifies poorly.</li>
+<li>Duct airflow: <strong>CFM = BTU/hr ÷ (ΔT × 1.08)</strong>, which lands near 400 CFM per ton for cooling.</li>
+</ul>
+</aside>
+<h2>How does this HVAC load calculator work?</h2>
 <p>Every tab here is built on the same skeleton, borrowed from ACCA Manual J and simplified to the inputs that move the number most. The baseline is the industry rule of thumb: <strong>20–30 BTU/hr per square foot</strong> of cooling, with 25 as the middle. From there the calculators apply four published adjustment factors:</p>
 <div class="tbl-wrap">
 <table>
@@ -283,7 +292,8 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </div>
 <p>Then a 10% equipment safety margin, rounded up to the nearest 500 BTU — matching how equipment is actually sold.</p>
 
-<h2>Quick reference: BTU by room size</h2>
+<p class="small" id="methodology-note"><strong>Methodology &amp; disclosure:</strong> the calculator applies the published rules of thumb on this page in your browser. It is a planning estimate, not a measured result and not a substitute for a full ACCA Manual J. Amazon links on this site are affiliate links; they do not change the math.</p>
+<h2>How many BTU does each room size need?</h2>
 <div class="tbl-wrap">
 <table>
 <tr><th>Room</th><th class="num">Sq ft</th><th class="num">Typical BTU/hr</th><th class="num">Mini-split head</th></tr>
@@ -296,8 +306,20 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </div>
 <p class="small">Assumes 8 ft ceilings, average sun and insulation. Real houses vary — that's what the calculators above are for.</p>
 
-<h2>Why oversizing is the #1 DIY mistake</h2>
+<h2>Why is oversizing the #1 DIY HVAC mistake?</h2>
 <p>Bigger feels safer and isn't. An AC that's too big cools the air fast, shuts off before it has dehumidified anything, and you get a cold clammy room plus compressor short-cycling that kills the equipment years early. Inverter mini-splits modulate and forgive some oversizing, but past ~30% above load you're paying for capacity you can't use. Undersizing, by contrast, just means the unit runs longer on the worst days — cheaper mistake.</p>
+
+<section id="faq-answers" aria-label="Common questions, answered">
+<h2>Common questions, answered</h2>
+<h3>How many BTU do I need per square foot?</h3>
+<p>The rule of thumb is 20–30 BTU/hr per square foot of living space, with 25 as a reasonable middle for a typical 8-foot-ceiling room in a moderate climate. Then adjust: sunny rooms +15%, shaded rooms −10%, poor insulation +25%, good insulation −15%, each window adds about 600 BTU/hr, and multiply by ceiling height ÷ 8. Add a 10% safety margin and round up to the nearest 500 BTU.</p>
+<h3>What size mini-split do I need for my room?</h3>
+<p>Standard mini-split indoor heads come in 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr sizes. Size to the nearest head at or above your calculated load — roughly 9k for a 300–400 sq ft bedroom, 12k for a 450–550 sq ft living room, 18k for a 750–850 sq ft open area. Don't oversize more than about 30%: an oversized unit short-cycles and dehumidifies poorly.</p>
+<h3>How do I calculate duct CFM from BTU?</h3>
+<p>Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) ≈ 1,111 CFM, which matches the ~400 CFM per ton rule of thumb.</p>
+<h3>How many watts of electric baseboard heat do I need per square foot?</h3>
+<p>Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls.</p>
+</section>
 
 <h2>Guides</h2>
 <div class="card"><h3><a href="mini-split-room-size.html">What size mini-split for each room?</a></h3><p>Head-by-head sizing from bedrooms to great rooms, multi-zone vs single-zone economics, and the 9k BTU workhorse.</p></div>
