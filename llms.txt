@@ -16,6 +16,23 @@
 ## Use policy
 Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
 
+## Questions
+- [150 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-150-sq-ft-room.html): ENERGY STAR boundary, 5,000 or 6,000 BTU/hr
+- [200 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-200-sq-ft-room.html): 6,000 BTU/hr in the 150 up to 250 row
+- [250 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-250-sq-ft-room.html): 6,000 or 7,000 BTU/hr on the chart line
+- [300 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-300-sq-ft-room.html): 7,000 or 8,000 BTU/hr on the chart line
+- [400 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-400-sq-ft-room.html): 9,000 or 10,000 BTU/hr on the chart line
+- [500 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-500-sq-ft-room.html): 12,000 BTU/hr in the 450 up to 550 row
+- [600 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-600-sq-ft.html): 14,000 BTU/hr in the 550 up to 700 row
+- [700 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-700-sq-ft.html): 14,000 or 18,000 BTU/hr on the chart line
+- [800 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-800-sq-ft.html): 18,000 BTU/hr in the 700 up to 1,000 row
+- [1,200 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-1200-sq-ft.html): 21,000 or 23,000 BTU/hr on the chart line
+- [1,500 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-1500-sq-ft.html): 24,000 or 30,000 BTU/hr on the chart line
+- [2,000 sq ft air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-2000-sq-ft.html): 30,000 or 34,000 BTU/hr on the chart line
+- [Kitchen air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-kitchen.html): add 4,000 BTU/hr; a 150 up to 250 sq ft kitchen is 10,000 BTU/hr
+- [Basement dehumidifier](https://hvac-load-calc.com/what-size-dehumidifier-for-basement.html): 20–30, 25–40, or 30–50 pints under 2,000 sq ft, plus the below-65°F frost note
+- [2,000 sq ft dehumidifier](https://hvac-load-calc.com/what-size-dehumidifier-for-2000-sq-ft.html): large-room floors of 30+, 40+, or 50+ pints; better to oversize than undersize
+
 ## Topic map
 - [HVACLoadCalc topic map](https://hvac-load-calc.com/topics.html): Room-by-room HVAC sizing for DIY mini-split installs.
 - **Room BTU:** [HVAC load calculator](https://hvac-load-calc.com/), [BTU room chart](https://hvac-load-calc.com/magnet.html), [BTU per square foot](https://hvac-load-calc.com/how-many-btu-per-square-foot.html)
