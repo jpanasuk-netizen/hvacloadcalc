@@ -65,20 +65,20 @@
 {
   "sources": [
     {
-      "title": "ACCA Manual J HVAC Load",
-      "url": "https://www.acc.org/manual-j",
-      "date": "2026-09-17"
+      "title": "ACCA Manual J Residential Load Calculation",
+      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
+      "date": "2026-10-02"
     },
     {
       "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/handbook",
-      "date": "2026-09-17"
+      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
@@ -319,6 +319,38 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <p>Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) ≈ 1,111 CFM, which matches the ~400 CFM per ton rule of thumb.</p>
 <h3>How many watts of electric baseboard heat do I need per square foot?</h3>
 <p>Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls.</p>
+</section>
+
+<section id="common-questions" aria-label="Common questions">
+<h2>Common questions</h2>
+<p>Room air conditioner and dehumidifier sizes taken from the ENERGY STAR charts.</p>
+<h3>Smaller rooms</h3>
+<ul>
+<li><a href="what-size-air-conditioner-for-150-sq-ft-room.html">What Size Air Conditioner Do I Need for a 150 Sq Ft Room?</a></li>
+<li><a href="what-size-air-conditioner-for-200-sq-ft-room.html">What Size Air Conditioner Do I Need for a 200 Sq Ft Room?</a></li>
+<li><a href="what-size-air-conditioner-for-250-sq-ft-room.html">What Size Air Conditioner Do I Need for a 250 Sq Ft Room?</a></li>
+<li><a href="what-size-air-conditioner-for-300-sq-ft-room.html">What Size Air Conditioner Do I Need for a 300 Sq Ft Room?</a></li>
+<li><a href="what-size-air-conditioner-for-400-sq-ft-room.html">What Size Air Conditioner Do I Need for a 400 Sq Ft Room?</a></li>
+<li><a href="what-size-air-conditioner-for-500-sq-ft-room.html">What Size Air Conditioner Do I Need for a 500 Sq Ft Room?</a></li>
+</ul>
+<h3>Larger areas</h3>
+<ul>
+<li><a href="what-size-air-conditioner-for-600-sq-ft.html">What Size Air Conditioner Do I Need for 600 Sq Ft?</a></li>
+<li><a href="what-size-air-conditioner-for-700-sq-ft.html">What Size Air Conditioner Do I Need for 700 Sq Ft?</a></li>
+<li><a href="what-size-air-conditioner-for-800-sq-ft.html">What Size Air Conditioner Do I Need for 800 Sq Ft?</a></li>
+<li><a href="what-size-air-conditioner-for-1200-sq-ft.html">What Size Air Conditioner Do I Need for 1,200 Sq Ft?</a></li>
+<li><a href="what-size-air-conditioner-for-1500-sq-ft.html">What Size Air Conditioner Do I Need for 1,500 Sq Ft?</a></li>
+<li><a href="what-size-air-conditioner-for-2000-sq-ft.html">What Size Air Conditioner Do I Need for 2,000 Sq Ft?</a></li>
+</ul>
+<h3>Kitchens</h3>
+<ul>
+<li><a href="what-size-air-conditioner-for-kitchen.html">What Size Air Conditioner Do I Need for a Kitchen?</a></li>
+</ul>
+<h3>Dehumidifiers</h3>
+<ul>
+<li><a href="what-size-dehumidifier-for-basement.html">What Size Dehumidifier Do I Need for a Basement?</a></li>
+<li><a href="what-size-dehumidifier-for-2000-sq-ft.html">What Size Dehumidifier Do I Need for 2,000 Sq Ft?</a></li>
+</ul>
 </section>
 
 <h2>Guides</h2>

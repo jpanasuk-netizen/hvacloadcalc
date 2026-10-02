@@ -1,14 +1,14 @@
 {
   "sources": [
     {
-      "title": "ACCA Manual J HVAC Load",
-      "url": "https://www.acc.org/manual-j",
-      "date": "2026-09-17"
+      "title": "ACCA Manual J Residential Load Calculation",
+      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
+      "date": "2026-10-02"
     },
     {
       "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/handbook",
-      "date": "2026-09-17"
+      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
+      "date": "2026-10-02"
     }
   ]
 }
