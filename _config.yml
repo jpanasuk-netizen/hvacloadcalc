@@ -1,0 +1,20 @@
+# GitHub Pages builds this repo with Jekyll. Existing HTML has no YAML
+# front matter and no Liquid tags, so Jekyll copies those pages unchanged.
+# Do not set a theme. This exclude list keeps repo-internal docs and
+# scripts off the public site. It replaces Jekyll's defaults, so the
+# usual build artifacts stay excluded too.
+exclude:
+  - README.md
+  - LAUNCH_CHECKLIST.md
+  - smoke-test.js
+  - "*.md"
+  - "*.yaml"
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - test
+  - tests
