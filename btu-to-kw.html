@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTU to kW Converter, and Electric Furnace Coil Sizing</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:title" content="BTU to kW Converter">
+<meta name="twitter:description" content="DOE divides Btu/h by 3,412 to get kilowatts of electric resistance heat. This calculator divides by 3.41. A published 22,600 Btu/h example lands at 6.62 kW either way you round the coil.">
+<meta name="description" content="Convert BTU/hr to kW with DOE's 3,412 Btu/h per kW and with this site's ÷ 3.41 function. Electric furnace coils in DOE's example are sized from that conversion, not from a cooling rule of thumb.">
+<link rel="canonical" href="https://hvac-load-calc.com/btu-to-kw.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="BTU to kW Converter">
+<meta property="og:description" content="3,412 Btu/h per kW is DOE's resistance-heat divisor. The calculator uses 3.41. See both on one published example.">
+<meta property="og:url" content="https://hvac-load-calc.com/btu-to-kw.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "BTU to kW Converter and Electric Furnace Coil Sizing",
+  "description": "DOE converts electric resistance heat with 3,412 Btu/h per kW. This site's watt function divides BTU/hr by 3.41. Neither divisor is a furnace size by itself.",
+  "url": "https://hvac-load-calc.com/btu-to-kw.html",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hvac-load-calc.com/btu-to-kw.html"},
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "HVAC Load Calc"},
+  "publisher": {"@type": "Organization", "name": "HVAC Load Calc"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hvac-load-calc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Topics", "item": "https://hvac-load-calc.com/topics.html"},
+    {"@type": "ListItem", "position": 3, "name": "BTU to kW", "item": "https://hvac-load-calc.com/btu-to-kw.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you convert BTU per hour to kilowatts?",
+      "acceptedAnswer": {"@type": "Answer", "text": "DOE's Building America forced-air guide divides Btu/h by 3,412 to get kilowatts of electric resistance heat. This site's baseboard function divides BTU/hr by 3.41, which is watts, and you divide by 1,000 for kilowatts. The two divisors are 3.412 and 3.41 Btu/h per watt."}
+    },
+    {
+      "@type": "Question",
+      "name": "How big is an electric furnace in DOE's worked example?",
+      "acceptedAnswer": {"@type": "Answer", "text": "In the Building America example, a heat pump rated 22,600 Btu/h at 47°F needs 22,600 ÷ 3,412 = 6.62 kW of emergency electric resistance heat if the compressor fails. Supplemental heat for the gap between 22,600 and 14,000 Btu/h is 8,600 ÷ 3,412 = 2.52 kW. Coils in that guide come in 5, 8, 10, 15, and 20 kW, and two staged 5 kW coils cover the 6.62 kW emergency figure."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I size an electric furnace from square footage?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. DOE sizes the resistance coils from a heating load in Btu/h, then divides by 3,412. A cooling rule of thumb is not that heating load. ACCA Manual J is the load calculation DOE tells you to insist on."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="what-size-ac-unit-for-1000-sq-ft.html">AC for 1,000 sq ft</a>
+    <a href="how-many-btu-per-square-foot.html">BTU per sq ft</a>
+    <a href="mini-split-room-size.html">Mini-split sizes</a>
+    <a href="electric-baseboard-watts.html">Baseboard watts</a>
+    <a href="duct-cfm-chart.html">Duct CFM guide</a>
+  </nav>
+</header>
+<main>
+<h1>BTU to kW, and What That Means for an Electric Furnace</h1>
+<p class="sub">Electric resistance heat is a unit conversion. The furnace size is the heating load you convert, not the cooling rule of thumb.</p>
+<p>Built by <a href="/about.html">Jeremy Panasuk</a>. Published October 3, 2026.</p>
+<div class="answer-box"><strong>Quick answer:</strong> DOE's <a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/forced_air_hvac_guide.pdf">Building America forced-air guide</a> converts electric-resistance coils with 3,412 Btu/h per kW. This site's baseboard function divides BTU/hr by 3.41 and returns watts. On DOE's own 22,600 Btu/h example the published result is 6.62 kW. The calculator's divisor returns 6,628 W. Both sit between a 5 kW coil and an 8 kW coil.</div>
+
+<h2>Two divisors, one physical step</h2>
+<p>A kilowatt of electric resistance heat is a rate of heat, just as BTU per hour is a rate of heat. The forced-air guide writes the step as Btu/h ÷ 3,412 = kW. Divide by 3.412, instead of 3,412, and the answer is watts. This site's <code>baseboardWatts</code> function, the one the baseboard tab uses, divides by 3.41. The 0.002 Btu/h per watt gap is rounding in the constant, not a second formula. The converter below calls that function and also divides by 3,412, so you can see both on whatever figure you type. The default is DOE's example, not a house this site measured.</p>
+
+<div class="card">
+<h2>Convert BTU/hr</h2>
+<div class="field">
+<label for="kwBtu">Rate to convert (BTU/hr)</label>
+<input type="number" id="kwBtu" value="22600" min="1" step="1">
+</div>
+<button type="button" id="kwGo" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Convert</button>
+<div id="kwOut" class="ans" hidden></div>
+<p class="small">The first line is this site's <code>baseboardWatts</code> result (BTU/hr ÷ 3.41). The second line is DOE's 3,412 Btu/h per kW. Neither line is a Manual J.</p>
+</div>
+
+<h2>Worked example: DOE's 22,600 Btu/h coil, run both ways</h2>
+<p>The forced-air guide's supplemental-heat example assumes a winter design temperature of 17°F, and a two-ton heat pump that provides 22,600 Btu/h of heating at 47°F and 14,000 Btu/h at 17°F, from an AHRI rating in that example. Supplemental resistance heat for the gap is (22,600 − 14,000) ÷ 3,412. The subtraction is 8,600 Btu/h. DOE states the quotient as 2.52 kW. Emergency heat, if the compressor fails, is the full 22,600 ÷ 3,412, which the guide states as 6.62 kW.</p>
+<p>Pass those same inputs through this site's function. <code>baseboardWatts(22600)</code> = 22,600 ÷ 3.41 = 6,628 W, or 6.628 kW. <code>baseboardWatts(8600)</code> = 8,600 ÷ 3.41 = 2,522 W, or 2.522 kW. DOE's published 6.62 kW and 2.52 kW are the 3,412-divisor results, already rounded to hundredths. The calculator is 8 W higher on the emergency figure and about 2 W higher on the supplemental figure. The guide says electric resistance coils typically come in 5, 8, 10, 15, and 20 kW, and that two staged 5 kW coils would cover that unit's emergency heat. 6.62 kW and 6.628 kW are the same coil decision: more than one 5 kW stage, less than an 8 kW single coil. The constant's third digit does not pick a different catalog size in this example.</p>
+<p>A one-ton cooling rate, which DOE's heating and cooling guide defines as 12,000 Btu, converts the same way if you only want the unit change. 12,000 ÷ 3,412 = 3.517 kW. <code>baseboardWatts(12000)</code> = 3,519 W. That is the heat rate of 12,000 Btu/h of resistance heat. It is not the electrical input of a 1-ton air conditioner, which moves heat with a compressor and is rated with an efficiency ratio, not with this divisor.</p>
+
+<h2>Electric furnace sizing is the heating load, then this division</h2>
+<p>An electric furnace is resistance heat in a cabinet. The forced-air guide is written for the resistance coils that back up a heat pump, and the arithmetic is the same conversion: take a heating load in Btu/h, divide by 3,412, and match a staged coil. The guide does not say to start from floor area. It tells you to get the heat pump's capacity at the outdoor design temperature from the manufacturer's balance-point diagram, subtract that from the Manual J heating load, and size the supplemental coil to the difference. Emergency heat covers the heating load if the compressor is out.</p>
+<p>There is no electric-furnace row in this site's cooling calculator, and there should not be. The room-BTU tab is a cooling rule of thumb (square feet, ceiling, sun, insulation, windows, then 10%). Feeding that cooling result into <code>baseboardWatts</code> and calling the answer a furnace invents a heating load. The <a href="electric-baseboard-watts.html">baseboard page</a> is resistance heat along a wall, with its own watts-per-square-foot planning range. It is not a furnace selection. DOE's <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">Guide to Home Heating and Cooling</a> says the old ton-per-area cooling estimate ignores climate and insulation, and it says to insist on ACCA Manual J for both heating and cooling equipment.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you. A product search does not establish a kilowatt size.</p>
+<p><a class="btn-amz" href="https://www.amazon.com/s?k=electric+furnace&amp;tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Electric furnaces on Amazon</a></p>
+</div>
+
+<h2>Common mistake</h2>
+<p>Taking a cooling tonnage, multiplying by 12,000, dividing by 3.41, and ordering that many kilowatts of furnace. You have converted a cooling rate into a resistance-heat rate. You have not calculated the heat the house loses in winter. The second mistake is treating 3.41 and 3,412 as if one of them were "wrong" enough to change the coil. In DOE's published example they do not. The third is copying the 22,600 Btu/h figure onto your house. That number is the guide's example heat pump at 47°F, not a national average.</p>
+
+<h2>Limits, and when to call a pro</h2>
+<p>Coil staging, breaker size, and wire are electrical work on top of the load calculation. This page does not do either one. Use the converter to check a Btu/h figure you already have from a real heating load or from a nameplate you are trying to read. For the furnace itself, the contractor's Manual J heating load comes first, then the ÷ 3,412 step, then a coil from the sizes the manufacturer actually sells. If someone sizes the furnace from square footage alone, DOE has already told you what to insist on instead.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#calc">HVAC load calculator</a> — cooling and baseboard tabs, not a furnace selector</li>
+<li><a href="electric-baseboard-watts.html">Baseboard watts, the other resistance-heat page</a></li>
+<li><a href="what-does-btu-stand-for.html">What BTU/hr means on the cooling side</a></li>
+<li><a href="topics.html">Topic map</a></li>
+</ul>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/forced_air_hvac_guide.pdf">U.S. Department of Energy, Building America: Forced Air System Design Guide</a> — <a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/forced_air_hvac_guide.pdf">https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/forced_air_hvac_guide.pdf</a> — accessed Oct 3, 2026.</li>
+<li><a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">U.S. Department of Energy, Guide to Home Heating and Cooling (DOE/EE-0338)</a> — <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf</a> — accessed Oct 3, 2026.</li>
+<li><a href="https://www.acca.org/standards/technical-manuals/manual-j">ACCA Manual J residential load calculation</a> — <a href="https://www.acca.org/standards/technical-manuals/manual-j">https://www.acca.org/standards/technical-manuals/manual-j</a> — accessed Oct 3, 2026.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<h3>How do you convert BTU per hour to kilowatts?</h3>
+<p>DOE's Building America forced-air guide divides Btu/h by 3,412 to get kilowatts of electric resistance heat. This site's baseboard function divides BTU/hr by 3.41, which is watts, and you divide by 1,000 for kilowatts. The two divisors are 3.412 and 3.41 Btu/h per watt.</p>
+<h3>How big is an electric furnace in DOE's worked example?</h3>
+<p>In the Building America example, a heat pump rated 22,600 Btu/h at 47°F needs 22,600 ÷ 3,412 = 6.62 kW of emergency electric resistance heat if the compressor fails. Supplemental heat for the gap between 22,600 and 14,000 Btu/h is 8,600 ÷ 3,412 = 2.52 kW. Coils in that guide come in 5, 8, 10, 15, and 20 kW, and two staged 5 kW coils cover the 6.62 kW emergency figure.</p>
+<h3>Can I size an electric furnace from square footage?</h3>
+<p>No. DOE sizes the resistance coils from a heating load in Btu/h, then divides by 3,412. A cooling rule of thumb is not that heating load. ACCA Manual J is the load calculation DOE tells you to insist on.</p>
+</main>
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="mini-split-room-size.html">mini-split guide</a> · <a href="duct-cfm-chart.html">duct CFM</a> · <a href="electric-baseboard-watts.html">baseboard watts</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<script src="assets/app.js"></script>
+<script>
+document.getElementById("kwGo").addEventListener("click", function () {
+  var b = parseFloat(document.getElementById("kwBtu").value);
+  var box = document.getElementById("kwOut");
+  if (!b || b <= 0) { box.hidden = false; box.innerHTML = "<p>Enter a BTU/hr figure greater than zero.</p>"; return; }
+  var siteW = baseboardWatts(b);
+  var doeKw = b / 3412;
+  box.hidden = false;
+  box.innerHTML =
+    '<div class="big">' + Math.round(siteW).toLocaleString("en-US") + ' <span class="unit">W on this calculator</span></div>' +
+    '<div class="grid2">' +
+      '<div class="stat"><b>' + (siteW / 1000).toFixed(3) + ' kW</b><span>baseboardWatts: BTU/hr ÷ 3.41</span></div>' +
+      '<div class="stat"><b>' + doeKw.toFixed(3) + ' kW</b><span>DOE: BTU/h ÷ 3,412</span></div>' +
+    '</div>' +
+    '<p class="note">Input ' + b.toLocaleString("en-US") + ' BTU/hr. The calculator wattage is ' + siteW.toFixed(1) + ' W before rounding. Coil catalogs in the DOE example are 5, 8, 10, 15, and 20 kW. This is a unit conversion, not a heat-loss calculation.</p>';
+});
+</script>
+</body>
+</html>

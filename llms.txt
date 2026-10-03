@@ -19,6 +19,15 @@
 ## Use policy
 Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
 
+## Guides
+- [What BTU stands for](https://hvac-load-calc.com/what-does-btu-stand-for.html): British thermal units per hour, and one ton = 12,000 Btu
+- [How an air conditioner works](https://hvac-load-calc.com/how-does-an-air-conditioner-work.html): DOE's evaporator, compressor, and condenser, plus a sunny-room sizing contrast
+- [Portable air conditioner sizing](https://hvac-load-calc.com/portable-air-conditioner-sizing.html): DOE SACC (0.2 at 95°F, 0.8 at 83°F), not a marketing BTU
+- [Clean an air conditioner filter](https://hvac-load-calc.com/how-to-clean-an-air-conditioner-filter.html): clogged filters and the 5–15% energy figure; the room load does not change
+- [Improve air conditioner efficiency](https://hvac-load-calc.com/how-to-improve-air-conditioner-efficiency.html): DOE thermostat, fan, and filter steps, and a shaded-versus-sunny calculator run
+- [Dispose of an air conditioner](https://hvac-load-calc.com/how-to-dispose-of-an-air-conditioner.html): EPA Section 608 recovery before disposal
+- [BTU to kW](https://hvac-load-calc.com/btu-to-kw.html): DOE's 3,412 Btu/h per kW beside this calculator's ÷ 3.41, including electric furnace coils
+
 ## Questions
 - [150 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-150-sq-ft-room.html): ENERGY STAR boundary, 5,000 or 6,000 BTU/hr
 - [200 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-200-sq-ft-room.html): 6,000 BTU/hr in the 150 up to 250 row
