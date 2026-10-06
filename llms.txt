@@ -2,19 +2,19 @@
 > Free HVAC sizing tools: Manual-J-inspired rule-of-thumb room BTU calculator (square footage with ceiling height, window, sun, and insulation factors), mini-split head sizing by zone, duct CFM from the sensible-heat formula (CFM = BTU/hr ÷ (ΔT × 1.08)), and electric baseboard wattage (watts = BTU/hr ÷ 3.41). Part of the GeneratorSizer calculator network. Built by Jeremy Panasuk, New Auburn, Wisconsin. Contact: jpanasuk@gmail.com.
 
 ## Core pages
-- [HVAC Load Calculator](https://hvac-load-calc.com/): the hub — room-by-room BTU sizing, mini-split head selection, duct CFM, and baseboard watts across 4 tabs, with a quick-reference BTU-by-room table
+- [HVAC Load Calculator](https://hvac-load-calc.com/): the hub — room-by-room BTU sizing, mini-split head selection, duct CFM, and baseboard watts across 4 tabs
 - [About & how this site is built](https://hvac-load-calc.com/about.html): who owns the site, how the calculators and page text are made, and why
 - [Privacy](https://hvac-load-calc.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://hvac-load-calc.com/contact.html): jpanasuk@gmail.com
-- [Mini-Split Room Size Guide](https://hvac-load-calc.com/mini-split-room-size.html): 9k–36k head sizes matched to real rooms, multi-zone vs single-zone economics, the oversizing trap
-- [Electric Baseboard Watts](https://hvac-load-calc.com/electric-baseboard-watts.html): the 7–10 W/sq ft rule, BTU→watt conversion, 120 vs 240 V circuit math, placement
-- [Duct CFM Guide](https://hvac-load-calc.com/duct-cfm-chart.html): worked CFM charts by tonnage and ΔT, per-run airflow, branch duct capacity table
+- [Mini-Split Room Size Guide](https://hvac-load-calc.com/mini-split-room-size.html): this calculator’s 9,000–36,000 BTU/hr heads. It does not assign a head to a room type
+- [Electric Baseboard Watts](https://hvac-load-calc.com/electric-baseboard-watts.html): watts = BTU/hr ÷ 3.41 after the room load. No watts-per-square-foot chart
+- [Duct CFM Guide](https://hvac-load-calc.com/duct-cfm-chart.html): CFM = BTU/hr ÷ (ΔT × 1.08). No duct-diameter table
 
 ## Related (sister sites)
 - [GeneratorSizer](https://generator-sizer.com/): running a central air conditioner on a generator (an electrical load, not a BTU)
 
 ## Use policy
-Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
+Cite freely with link attribution. This calculator uses a 25 BTU/sq ft baseline and the factors printed on the calculator page. It is not a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
 
 ## Guides
 - [What BTU stands for](https://hvac-load-calc.com/what-does-btu-stand-for.html): British thermal units per hour, and one ton = 12,000 Btu

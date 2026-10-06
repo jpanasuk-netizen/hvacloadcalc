@@ -9,8 +9,8 @@
 <meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What Size AC for 1,000 Sq Ft?">
-<meta name="twitter:description" content="Rule-of-thumb BTU math for 1,000 sq ft: roughly 25,000 BTU before adjustments — about a 2.5-ton or a 24k–30k mini-split, depending on sun, insulation, and ceilings.">
-<meta name="description" content="1,000 sq ft needs roughly 20,000–30,000 BTU/hr of cooling by rule-of-thumb math — about a 2.5-ton unit or 24k–30k mini-split.">
+<meta name="twitter:description" content="This calculator’s baseline for 1,000 sq ft is 1,000 × 25 = 25,000 BTU/hr before ceiling, sun, insulation, and windows.">
+<meta name="description" content="This calculator’s baseline for 1,000 sq ft is 1,000 × 25 = 25,000 BTU/hr before ceiling, sun, insulation, and windows.">
 <link rel="canonical" href="https://hvac-load-calc.com/what-size-ac-unit-for-1000-sq-ft.html">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="What Size AC for 1,000 Sq Ft?">
@@ -56,15 +56,15 @@
 
 <main>
 <h1>What size AC unit do I need for 1,000 square feet?</h1>
-<p class="sub">Short answer: 20,000–30,000 BTU/hr depending on your envelope — usually a 2.5-ton unit or a 24k–30k mini-split. Here's exactly where your number falls in that range.</p>
+<p class="sub">This calculator’s baseline is 1,000 × 25 BTU/hr, before ceiling, sun, insulation, and windows.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> A 1,000 sq ft space needs about 25,000 BTU/hr (2.5 tons) at the rule-of-thumb 25 BTU/sq ft — roughly a 2.5-ton central unit or a 24k–30k mini-split. Run the calculator below for your exact load.</div>
+<div class="answer-box"><strong>Quick answer:</strong> 1,000 × 25 = 25,000 BTU/hr on this calculator, before the other factors. <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">DOE’s heating and cooling guide</a> defines one ton as 12,000 Btu, so 25,000 ÷ 12,000 = 2.08 tons. That division is not a model number to order.</div>
 
 <h2>Step 1: the base load</h2>
 <div class="ans">
-<strong>1,000 sq ft × 25 BTU/hr per sq ft = 25,000 BTU/hr</strong> — the middle-of-the-road starting point for a typical 8-foot-ceiling space in a moderate climate. That's 2.08 tons, and standard equipment sizes up from there.
+<strong>1,000 sq ft × 25 BTU/hr per sq ft = 25,000 BTU/hr</strong> before ceiling, sun, insulation, and windows. With DOE’s 12,000 Btu per ton, 25,000 ÷ 12,000 = 2.08 tons.
 </div>
-<p class="small">Why 25? The rule-of-thumb range is 20–30 BTU/hr/sq ft. 20 assumes tight, shaded, well-insulated construction; 30 assumes sun-beaten, leaky, minimally insulated space. 25 is the honest middle — then you adjust instead of guessing.</p>
+<p class="small">25 BTU/hr per square foot is this calculator’s baseline.</p>
 
 <h2>Step 2: the adjustments</h2>
 <div class="tbl-wrap">
@@ -72,49 +72,24 @@
 <tr><th>Factor</th><th class="num">Multiplier</th><th>1,000 sq ft result</th></tr>
 <tr><td>Base (moderate climate, 8 ft ceilings)</td><td class="num">25 BTU/sq ft</td><td class="num">25,000 BTU</td></tr>
 <tr><td>Good insulation (recent, air-sealed)</td><td class="num">−15%</td><td class="num">21,250 BTU</td></tr>
-<tr><td>Poor insulation (pre-1980, drafty)</td><td class="num">+25%</td><td class="num">31,250 BTU</td></tr>
+<tr><td>Poor insulation (drafty)</td><td class="num">+25%</td><td class="num">31,250 BTU</td></tr>
 <tr><td>Big west/south sun exposure</td><td class="num">+15%</td><td class="num">28,750 BTU</td></tr>
 <tr><td>Heavily shaded lot</td><td class="num">−10%</td><td class="num">22,500 BTU</td></tr>
 <tr><td>Each window (add per window)</td><td class="num">+600 BTU</td><td class="num">+600 each</td></tr>
 <tr><td>10 ft ceilings (25 × 10 ÷ 8)</td><td class="num">×1.25</td><td class="num">31,250 BTU</td></tr>
 </table>
 </div>
-<p>Add a 10% safety margin and round up to the nearest standard size. Two common full build-outs:</p>
-<ul>
-  <li><strong>Tight 1,000 sq ft condo, shaded, 8 ft ceilings:</strong> 25,000 −15% −10% = ~19,100 → ×1.1 margin ≈ 21,000 → <strong>24,000 BTU (2-ton)</strong>.</li>
-  <li><strong>Sunny 1,000 sq ft loft, 10 ft ceilings, older windows:</strong> 25,000 +15% +5 windows ×1.25 ceiling = ~34,400 → <strong>36,000 BTU (3-ton)</strong>.</li>
-</ul>
+<p>The live calculator multiplies sun and insulation together, then adds windows, then a 10% margin, then rounds up to the nearest 500 BTU. Each row above changes only one factor, and it stops before that margin. Run the <a href="index.html#calc">calculator</a> for the combined result. Room-by-room heads are in the <a href="mini-split-room-size.html">mini-split sizing guide</a>.</p>
 
-<h2>Step 3: what you actually buy</h2>
-<div class="tbl-wrap">
-<table>
-<tr><th>Calculated load</th><th>Central AC / heat pump</th><th>Mini-split</th></tr>
-<tr><td class="num">18,000–21,000 BTU</td><td>2-ton</td><td>18k–24k single head</td></tr>
-<tr><td class="num">22,000–27,000 BTU</td><td>2.5-ton</td><td>24k–30k, or 2-zone (12k + 12k)</td></tr>
-<tr><td class="num">28,000–34,000 BTU</td><td>3-ton</td><td>30k–36k, or 2-zone (18k + 12k)</td></tr>
-</table>
-</div>
-<p>For 1,000 sq ft spread across bedrooms plus a living area, a two-zone mini-split (12k + 12k) often beats one big unit: each room gets its own thermostat, and zoned heads modulate instead of blasting one central loop. The room-by-room version of this math is in the <a href="mini-split-room-size.html">mini-split sizing guide</a>.</p>
-
-<h2>The oversizing trap, one more time</h2>
-<p>The single most expensive mistake at this square footage is buying "3-ton because it's only a little more." AC removes humidity in the last half of each cooling cycle; an oversized unit satisfies the thermostat first, every time, and leaves the space cold and clammy. Fixed-speed systems suffer most; inverter mini-splits modulate down and forgive 10–20% oversizing — but not 40%. If your math says 25,000, buy the 24k–30k class, not the 36k.</p>
+<h2>The oversizing trap</h2>
+<p>An oversized unit can satisfy the thermostat before it has dehumidified, and leave the space cold and clammy. This page does not print a percent of oversize that is safe.</p>
 
 <h2>Ducts and airflow (central only)</h2>
-<p>A 2.5-ton unit moving 400 CFM per ton needs about 1,000 CFM of duct capacity — run your supply trunks through the <a href="duct-cfm-chart.html">duct CFM guide</a> (CFM = BTU ÷ ΔT × 1.08) before committing to a layout. An undersized return is the quiet killer of right-sized systems: the unit starves, the coil ices, the capacity you paid for never arrives.</p>
+<p>Airflow is CFM = BTU/hr ÷ (ΔT × 1.08), on the <a href="duct-cfm-chart.html">duct CFM guide</a>. This page does not assign a CFM-per-ton rule.</p>
 
 <div class="affil">
 <span class="tag">Affiliate</span>
-<p class="small">The 24k–30k class is where 1,000 sq ft lands: 2-zone DIY mini-split systems, 2.5-ton heat pumps, and the line-set kits and wall brackets that finish the install. <a href="https://www.amazon.com/s?k=24000+btu+mini+split&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">24k mini-splits on Amazon</a> · <a href="https://www.amazon.com/s?k=mini+split+line+set+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">line-set kits on Amazon</a> · <a href="https://www.amazon.com/s?k=2.5+ton+heat+pump&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">2.5-ton heat pumps on Amazon</a></p>
-</div>
-
-<h2>What the right size costs (2026)</h2>
-<p>Equipment price tracks tonnage, so the sizing math is a budget line too. As of 2026 street pricing: a 2-ton central heat pump runs $3,500–6,000 installed, 2.5-ton $4,000–7,000, 3-ton $4,500–8,000 — and the jump between adjacent sizes is usually $400–700, which is exactly why salespeople push one size up. Resist it: the extra ton doesn't cool better, it dehumidifies worse and cycles itself toward an early compressor death. DIY mini-split economics differ: a 24k single-zone pre-charged unit runs $1,400–2,500 with a weekend of homeowner labor, while the same head pro-installed with a Mitsubishi or Fujitsu lands $3,500–5,500.</p>
-<p>Efficiency is the other half of the bill. SEER2 ratings decide the operating cost, not the sticker: in a 1,000 sq ft space running 1,000 full-load hours a year, each ton of capacity at SEER2 14 costs roughly $220/season at $0.15/kWh — stepping to SEER2 18–20 cuts that by 25–30%, or $60–70 per season per size class. Over a 15-year compressor life, the efficiency delta pays for the upcharge on the 2.5-ton class; on the 3-ton it pays twice.</p>
-<p>One more check before you order: electrical. A 2.5-ton heat pump wants a 30–40 A 240 V circuit; adding one to an older panel is a $500–2,000 line item that never appears in HVAC quotes until install day.</p>
-
-<div class="affil">
-<span class="tag">Affiliate</span>
-<p class="small">The 24k–30k class is where 1,000 sq ft lands: 2-zone DIY mini-split systems, 2.5-ton heat pumps, and the line-set kits and wall brackets that finish the install. <a href="https://www.amazon.com/s?k=24000+btu+mini+split&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">24k mini-splits on Amazon</a> · <a href="https://www.amazon.com/s?k=mini+split+line+set+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">line-set kits on Amazon</a> </p>
+<p class="small">A product search is not a load. <a href="https://www.amazon.com/s?k=mini+split&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Mini-splits on Amazon</a> · <a href="https://www.amazon.com/s?k=mini+split+line+set+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">line-set kits on Amazon</a></p>
 </div>
 
 <div class="disclaim">

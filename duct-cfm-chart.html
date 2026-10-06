@@ -42,10 +42,10 @@
     },
     {
       "@type": "Question",
-      "name": "Why is 400 CFM per ton not the same as the 20°F column?",
+      "name": "Why does a 28°F split not match the 20°F column?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "400 CFM per ton on this page is the 28°F worked example: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, or about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM. The chart’s three columns are three different splits, not three ways of writing 400."
+        "text": "At a 28°F split, 24,000 ÷ (28 × 1.08) ≈ 794 CFM, about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM, about 556 CFM per ton. Those are two inputs to the same formula. The chart’s three columns are three different splits."
       }
     }
   ]
@@ -87,13 +87,13 @@
 <h1>Duct CFM: the BTU ÷ (ΔT × 1.08) guide</h1>
 <p class="sub">One formula turns equipment size into the airflow your ducts must carry — with the worked numbers for every common system size.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> Size ducts at about 400 CFM per ton of cooling — 2 tons ≈ 800 CFM, 3 tons ≈ 1,200 CFM — or compute exactly with CFM = BTU/hr ÷ (ΔT × 1.08). Use the chart below for your system size.</div>
+<div class="answer-box"><strong>Quick answer:</strong> CFM = BTU/hr ÷ (ΔT × 1.08). The chart below is that formula at three splits. One ton is 12,000 Btu in the <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">DOE heating and cooling guide</a>, so a 2-ton row is 24,000 BTU/hr.</div>
 
 <h2>The formula</h2>
-<p><code>CFM = BTU/hr ÷ (ΔT × 1.08)</code>. The 1.08 constant is air's heat-carrying capacity at sea level (0.075 lb/cu ft density × 0.24 BTU/lb-°F × 60 min/hr). ΔT is the temperature split between supply and return air — the amount the equipment heats or cools the air in one pass.</p>
-<p>Worked example: a 2-ton (24,000 BTU/hr) AC at a typical cooling ΔT of 27–28°F: CFM = 24,000 ÷ (28 × 1.08) ≈ 794 CFM — which is exactly where the industry shorthand of ~400 CFM per ton comes from. Setups with a smaller split (20°F) run more CFM per ton; drier-coil designs with a bigger split run less. Your equipment's spec sheet and measured split settle it.</p>
+<p><code>CFM = BTU/hr ÷ (ΔT × 1.08)</code>. This calculator’s duct function uses that 1.08. ΔT is the temperature split between supply and return air — the amount the equipment heats or cools the air in one pass.</p>
+<p>Worked example at a 28°F split, not a claim that 28°F is typical: a 2-ton (24,000 BTU/hr) input is 24,000 ÷ (28 × 1.08) = 24,000 ÷ 30.24 ≈ 794 CFM, or about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM. The split you type is the input. The formula does not pick it.</p>
 
-<h2>CFM by tonnage, at the usual ΔTs</h2>
+<h2>CFM by tonnage at three splits</h2>
 <div class="tbl-wrap">
 <table>
 <tr><th>System</th><th class="num">ΔT 20°F</th><th class="num">ΔT 25°F</th><th class="num">ΔT 30°F</th></tr>
@@ -105,24 +105,11 @@
 <tr><td>5 ton (60,000 BTU/hr)</td><td class="num">2,778</td><td class="num">2,222</td><td class="num">1,852</td></tr>
 </table>
 </div>
-<p class="small">Heating with a gas furnace? ΔT is much larger — 40–60°F is normal, so a 60,000 BTU/hr furnace at ΔT 50 needs only 1,111 CFM. Heat pumps sit near 20–25°F in heating.</p>
-
 <h2>Per-run airflow</h2>
-<p>Divide total CFM by the number of supply runs to sanity-check the branch layout. At 1,200 CFM across 8 runs, each branch carries 150 CFM — typical residential branches at 6–7 inch round carry 100–150 CFM. If your per-run number forces 8-inch branches everywhere, the trunk is starved or the run count is too low.</p>
-<div class="tbl-wrap">
-<table>
-<tr><th>Duct (round, typical residential)</th><th class="num">Carries, approx CFM</th></tr>
-<tr><td>5 inch branch</td><td class="num">60–80</td></tr>
-<tr><td>6 inch branch</td><td class="num">100</td></tr>
-<tr><td>7 inch branch</td><td class="num">150</td></tr>
-<tr><td>8 inch branch</td><td class="num">200</td></tr>
-<tr><td>12 inch trunk</td><td class="num">800–1,000</td></tr>
-<tr><td>14 inch trunk</td><td class="num">1,200–1,400</td></tr>
-</table>
-</div>
+<p>Divide the formula’s CFM by the number of supply runs if you want a per-run figure. The worked example below does that for six runs. Diameter is not in this formula.</p>
 
 <h2>Diagnosing an existing system</h2>
-<p>Measure supply and return temps a few feet from the equipment with a probe thermometer. Cooling split much under 16°F usually means low airflow (dirty coil/filter, undersized returns); much over 22°F on AC suggests low charge or, in humid climates, deliberately low airflow for dehumidification. The formula runs both directions — measured CFM × ΔT × 1.08 gives you delivered BTU/hr.</p>
+<p>Measure supply and return temperatures and use those as ΔT. The formula runs both directions — measured CFM × ΔT × 1.08 gives delivered BTU/hr. This page does not print a normal split.</p>
 
 <div class="affil">
 <span class="tag">Affiliate</span>
@@ -140,10 +127,10 @@
 <h2>Worked example on this site’s duct tab</h2>
 <p>The duct tab calls <code>ductCFM</code>: BTU/hr ÷ (ΔT × 1.08). One ton is 12,000 BTU/hr, so a 3-ton cooling rate is 36,000 BTU/hr and a 2-ton rate is 24,000 BTU/hr. At a 20°F supply-to-return split, ΔT × 1.08 is 21.6. <code>ductCFM(36000, 20)</code> is 36,000 ÷ 21.6 = 1,666.666… CFM, and the ΔT 20 column above rounds that to 1,667. <code>ductCFM(24000, 20)</code> is 24,000 ÷ 21.6 = 1,111.111… CFM, which that column rounds to 1,111. Split the 2-ton result across 6 supply runs and each run is 1,111.111 ÷ 6 = 185.185 CFM.</p>
 <p>Open the <a href="index.html#calc">calculator</a>, choose Duct CFM, and enter 36000 with a ΔT of 20, or 24000 with a ΔT of 20. The result card shows the unrounded quotient. Square footage does not belong in that tab. The room-BTU tab is where square footage, ceiling height, windows, sun, and insulation are entered. CFM starts from a BTU/hr figure you already have.</p>
-<p>The ~400 CFM per ton shorthand on this page is the 28°F example already shown above, not the 20°F column. 24,000 ÷ (28 × 1.08) = 24,000 ÷ 30.24 ≈ 794 CFM, and 794 ÷ 2 ≈ 397 CFM per ton. At ΔT 20 the same 24,000 BTU/hr is 1,111 CFM, about 556 CFM per ton. Using 400 CFM per ton when the split is 20°F understates the airflow the formula returns.</p>
+<p>At a 28°F split, 24,000 ÷ (28 × 1.08) = 24,000 ÷ 30.24 ≈ 794 CFM, and 794 ÷ 2 ≈ 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM, about 556 CFM per ton. The split is an input. This page does not use a CFM-per-ton rule in place of the formula.</p>
 
 <h2>Common mistake</h2>
-<p>Reading a duct diameter off the CFM. The formula returns an airflow. Diameter, friction rate, and available static pressure are <a href="https://www.acca.org/standards/technical-manuals/manual-d">ACCA Manual D</a>. The approximate branch table on this page is a sanity check, not a design, and it is not a Manual D friction-rate table. The <a href="https://www.ashrae.org/technical-resources/ashrae-handbook">ASHRAE handbook</a> is the engineering reference for the air-side quantities. It does not replace a measurement of the equipment’s external static pressure, and the blower still has to be able to move the CFM against that pressure.</p>
+<p>Reading a duct diameter off the CFM. The formula returns an airflow. Diameter, friction rate, and available static pressure are <a href="https://www.acca.org/standards/technical-manuals/manual-d">ACCA Manual D</a>. This page does not include a diameter table. The <a href="https://www.ashrae.org/technical-resources/ashrae-handbook">ASHRAE handbook</a> is the engineering reference for the air-side quantities. It does not replace a measurement of the equipment’s external static pressure, and the blower still has to be able to move the CFM against that pressure.</p>
 <p>The other mistake is typing the room’s square footage into the duct tab and treating the result as a system size. Size the equipment on the room-BTU tab, or from a Manual J, then bring that BTU/hr here.</p>
 
 <h2>Frequently asked questions</h2>
@@ -151,8 +138,8 @@
 <p>ductCFM(36000, 20) is 36,000 ÷ (20 × 1.08) = 1,666.666… CFM. This page’s chart rounds that to 1,667. One ton is 12,000 BTU/hr, so 3 tons is 36,000 BTU/hr.</p>
 <h3>Does that CFM pick the duct diameter?</h3>
 <p>No. ACCA Manual D sizes the duct from friction rate, material, and available static pressure. The CFM is the airflow target. A diameter guessed from CFM alone is not a Manual D.</p>
-<h3>Why is 400 CFM per ton not the same as the 20°F column?</h3>
-<p>400 CFM per ton on this page is the 28°F worked example: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, or about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM. The chart’s three columns are three different splits, not three ways of writing 400.</p>
+<h3>Why does a 28°F split not match the 20°F column?</h3>
+<p>At a 28°F split, 24,000 ÷ (28 × 1.08) ≈ 794 CFM, about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM, about 556 CFM per ton. Those are two inputs to the same formula. The chart’s three columns are three different splits.</p>
 
 <section class="sources-section" aria-labelledby="sources-heading">
 <h2 id="sources-heading">Sources & Standards</h2>

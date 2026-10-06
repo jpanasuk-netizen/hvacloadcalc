@@ -1,12 +1,12 @@
 /* HVACLoadCalc calculators — vanilla JS, no dependencies.
-   Method: ACCA Manual J-inspired rule-of-thumb sizing (20–30 BTU/sq ft baseline,
-   here 25, adjusted for ceiling height, windows, sun, and insulation), then
+   Method: this calculator's factors (25 BTU/sq ft baseline,
+   adjusted for ceiling height, windows, sun, and insulation), then
    10% safety margin. This is a planning tool, NOT a substitute for a full
    ACCA Manual J calculation. All estimates rounded UP to be safe.
    Every compute function is pure — DOM code reads values and calls them. */
 "use strict";
 
-var BASE_BTU_SQFT = 25;          // rule-of-thumb midpoint of the 20–30 BTU/sq ft range
+var BASE_BTU_SQFT = 25;          // this calculator's baseline BTU/hr per sq ft
 var WINDOW_BTU = 600;            // average added cooling load per window
 var SAFETY_MARGIN = 1.10;        // 10% equipment safety factor
 
@@ -72,7 +72,7 @@ function baseboardPlan(btusPerHour, volts) {
   return {
     watts: Math.ceil(watts),
     amps: watts / v,
-    linearFt: Math.ceil(watts / 250)   // ~250 W per linear ft of standard baseboard
+    linearFt: Math.ceil(watts / 250)   // this calculator's length divisor
   };
 }
 
@@ -105,7 +105,7 @@ function calcRoomBTU(){
   var html = '<div class="big">'+fmt(btu)+' <span class="unit">BTU/hr cooling</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+tons+' ton</b><span>Equivalent cooling capacity</span></div>'+
-      '<div class="stat"><b>'+Math.round(raw/sqft)+'</b><span>BTU/hr per sq ft (rule-of-thumb range: 20–30)</span></div>'+
+      '<div class="stat"><b>'+Math.round(raw/sqft)+'</b><span>BTU/hr per sq ft after this calculator’s factors</span></div>'+
       '<div class="stat"><b>'+fmt(raw)+'</b><span>Raw load before rounding up to 500</span></div>'+
       '<div class="stat"><b>'+ht+' ft</b><span>Ceiling height ('+(ht/8).toFixed(2)+'× factor vs 8 ft)</span></div>'+
     '</div>'+
@@ -139,7 +139,7 @@ function calcMiniSplit(){
       '<div class="stat"><b>'+fmt(rec.perZoneSize)+'</b><span>BTU/hr per zone (rounded up to 500)</span></div>'+
       '<div class="stat"><b>'+(rec.oversize * 100).toFixed(0)+'%</b><span>Headroom above calculated load</span></div>'+
     '</div>'+
-    '<p class="note">'+headTxt+'. Don\'t oversize: an inverter mini-split modulates, but a unit more than ~30% above load short-cycles, dehumidifies poorly, and wastes money. Standard head sizes: 9k, 12k, 15k, 18k, 24k, 30k, 36k BTU. <strong>Planning estimate only — not a substitute for a Manual J report.</strong></p>';
+    '<p class="note">'+headTxt+'. Head sizes in this calculator: 9k, 12k, 15k, 18k, 24k, 30k, 36k BTU. <strong>Planning estimate only — not a substitute for a Manual J report.</strong></p>';
   var box = el("msResult"); box.hidden = false; box.innerHTML = html;
   if (window.updateMatchedCTA) window.updateMatchedCTA(rec.size || need, 'minisplit');
 }
@@ -156,10 +156,10 @@ function calcDuct(){
     '<div class="grid2">'+
       '<div class="stat"><b>'+Math.round(cfm/perRoom)+'</b><span>CFM per room ('+perRoom+' supplies)</span></div>'+
       '<div class="stat"><b>'+dt+'°F</b><span>Supply-to-return temperature split (ΔT)</span></div>'+
-      '<div class="stat"><b>'+(btu/BTU_PER_TON).toFixed(1)+' ton</b><span>Equipment size — rule of thumb: ~400 CFM per ton</span></div>'+
-      '<div class="stat"><b>'+fmt(cfm/BTU_PER_TON > 0 ? cfm/(btu/BTU_PER_TON) : 0)+'</b><span>CFM per ton — check against 350–450 design range</span></div>'+
+      '<div class="stat"><b>'+(btu/BTU_PER_TON).toFixed(1)+' ton</b><span>BTU/hr ÷ 12,000</span></div>'+
+      '<div class="stat"><b>'+fmt(cfm/BTU_PER_TON > 0 ? cfm/(btu/BTU_PER_TON) : 0)+'</b><span>CFM divided by that ton figure</span></div>'+
     '</div>'+
-    '<p class="note">Formula: CFM = BTU/hr ÷ (ΔT × 1.08), the standard sensible-heat airflow equation. A ΔT of 20°F is typical for cooling; heat pumps often run 20–25°F, gas furnaces 40–60°F. Trunk and branch ducts also need friction-rate sizing — this number is the starting point, not the duct diameter. <strong>Estimate only — not a substitute for ACCA Manual D duct design.</strong></p>';
+    '<p class="note">Formula: CFM = BTU/hr ÷ (ΔT × 1.08). Trunk and branch ducts also need friction-rate sizing — this number is the airflow, not the duct diameter. <strong>Estimate only — not a substitute for ACCA Manual D duct design.</strong></p>';
   var box = el("dcResult"); box.hidden = false; box.innerHTML = html;
   if (window.updateMatchedCTA) window.updateMatchedCTA(1, 'duct');
 }
@@ -172,16 +172,16 @@ function calcBaseboard(){
   var cold = el("bbCold").value === "yes";
   if(!sqft || sqft <= 0){ alert("Enter the room's square footage."); return; }
 
-  // Rule of thumb: ~10 W/sq ft, adjusted like the BTU tab (1 W ≈ 3.41 BTU/hr)
+  // Room load at an 8 ft ceiling, then watts = BTU/hr / 3.41. Cold climate multiplies that load by 1.1.
   var btu  = ceilTo(roomLoadBTU(sqft, 8, Math.round(sqft/100), "average", ins) * (cold ? 1.1 : 1.0), 500);
   var plan = baseboardPlan(btu, v);
   var wpsf = (plan.watts / sqft);
 
   var html = '<div class="big">'+fmt(plan.watts)+' <span class="unit">watts of baseboard heat</span></div>'+
     '<div class="grid2">'+
-      '<div class="stat"><b>'+wpsf.toFixed(1)+' W/sq ft</b><span>Rule-of-thumb range: 7–10 W per sq ft</span></div>'+
-      '<div class="stat"><b>'+plan.linearFt+' ft</b><span>Total baseboard length (~250 W per linear ft)</span></div>'+
-      '<div class="stat"><b>'+plan.amps.toFixed(1)+' A</b><span>Circuit load at '+v+' V (use a breaker ≥ 125% of this)</span></div>'+
+      '<div class="stat"><b>'+wpsf.toFixed(1)+' W/sq ft</b><span>Watts from this run, divided by square feet</span></div>'+
+      '<div class="stat"><b>'+plan.linearFt+' ft</b><span>Total baseboard length (watts ÷ 250 in this calculator)</span></div>'+
+      '<div class="stat"><b>'+plan.amps.toFixed(1)+' A</b><span>Watts ÷ '+v+' V</span></div>'+
       '<div class="stat"><b>'+fmt(btu)+'</b><span>BTU/hr equivalent (÷ 3.41 = watts)</span></div>'+
     '</div>'+
     '<p class="note">Formula: watts = BTU/hr ÷ 3.41. Install along exterior walls, under windows where possible, and never under towel bars or outlets. Circuit sizing and wiring are electrician territory — <strong>this wattage is a planning estimate, not a substitute for a heat-loss calculation or load calculation (NEC Article 220).</strong></p>';
