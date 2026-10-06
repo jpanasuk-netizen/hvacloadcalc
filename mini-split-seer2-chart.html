@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:title" content="Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)">
+<meta name="description" content="Cooling capacity, SEER2, EER2, and HSPF2 copied from the ENERGY STAR mini-split heat pump dataset on October 6, 2026, for single-zone models.">
+<link rel="canonical" href="https://hvac-load-calc.com/mini-split-seer2-chart.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)">
+<meta property="og:description" content="Cooling capacity, SEER2, EER2, and HSPF2 copied from the ENERGY STAR mini-split heat pump dataset on October 6, 2026, for single-zone models.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "HVAC Load Calculator", "item": "https://hvac-load-calc.com/"},
+  {"@type": "ListItem", "position": 2, "name": "Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)", "item": "https://hvac-load-calc.com/mini-split-seer2-chart.html"}
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)",
+  "description": "Cooling capacity (Btu/h), SEER2, EER2, and HSPF2 for 17 single-zone ductless combinations, copied from the ENERGY STAR Certified Mini-Split Heat Pumps dataset on October 6, 2026.",
+  "url": "https://hvac-load-calc.com/mini-split-seer2-chart.html",
+  "creator": {"@type": "Organization", "name": "HVAC Load Calculator"},
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "text/csv",
+    "contentUrl": "https://hvac-load-calc.com/assets/data/mini-split-seer2.csv"
+  },
+  "dateModified": "2026-10-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do the cooling capacity, SEER2, EER2, and HSPF2 figures come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each figure is copied from the ENERGY STAR Certified Mini-Split Heat Pumps dataset (akti-mt5s) as accessed on October 6, 2026. The record link in the row opens that combination. If a field were blank in the dataset, the cell would say not listed. None of the rows in this table had a blank in those four fields."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SEER2 change this calculator's BTU result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The room-load function does not take SEER2, EER2, or HSPF2 as an input. Those ratings describe the certified combination. The calculator describes the room."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="mini-split-room-size.html">Mini-split by room</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<h1>Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)</h1>
+<p class="sub">Nameplate ratings for single-zone ductless heat pumps. Not a room-size chart.</p>
+<div class="answer-box"><strong>Quick answer:</strong> The numbers below are copied from the <a href="https://data.energystar.gov/Active-Specifications/ENERGY-STAR-Certified-Mini-Split-Heat-Pumps/akti-mt5s">ENERGY STAR Certified Mini-Split Heat Pumps</a> dataset, accessed October 6, 2026. A row is here only when that outdoor family is named single-zone on the linked manufacturer page. <a href="assets/data/mini-split-seer2.csv">Download CSV</a>.</div>
+
+<h2>What this table is</h2>
+<p>The dataset view is every certified model with product type "HP - Mini or Multi Split". It does not label single-zone versus multi-split. This page keeps 17 combinations:</p>
+<ul>
+<li>Daikin OTERRA outdoor models that start with RXF. Daikin’s <a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">OTERRA wall-mount page</a> calls that family a single-zone heat pump.</li>
+<li>Mitsubishi Electric MUZ-FS models whose outdoor number does not contain NAH. Mitsubishi’s <a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">MUZ-FS page</a> calls it a wall-mounted single-zone heat pump.</li>
+<li>MRCOOL DIY wall pairs named in the <a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">5th Gen DIY Single Zone Series brochure</a> (version date on the PDF: 06.24.26) that were also in the dataset that day.</li>
+</ul>
+<p>The figures are copied from ENERGY STAR. The Dataset markup on this page names a Creative Commons Attribution license for this page’s table and CSV.</p>
+<p>Cooling capacity, SEER2, EER2, and HSPF2 are the dataset fields <code>cooling_capacity_btu_h</code>, <code>seer2_btu_wh</code>, <code>eer2_btu_wh</code>, and <code>hspf2_btu_wh</code>, copied as published. The dataset response on October 6, 2026 carried <code>Last-Modified: Mon, 05 Oct 2026 16:15:09 GMT</code>. Asterisks in a model number are part of the published model string. Click a heading to sort. The first order is brand, then cooling capacity.</p>
+<p>The same MRCOOL brochure lists DIY-36-HP-C-230D25-O. That outdoor model was not in this dataset on the access date, so it has no row here.</p>
+
+<h2>The rows</h2>
+<div class="tbl-wrap">
+<table class="sortable">
+<thead>
+<tr>
+<th data-type="text">Brand</th>
+<th data-type="text">Series</th>
+<th data-type="text">Outdoor model</th>
+<th data-type="text">Indoor model</th>
+<th data-type="num">Cooling capacity (Btu/h)</th>
+<th data-type="num">SEER2 (Btu/Wh)</th>
+<th data-type="num">EER2 (Btu/Wh)</th>
+<th data-type="num">HSPF2 (Btu/Wh)</th>
+<th data-type="text">Dataset record</th>
+<th data-type="text">Single-zone source</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF09AXVJU</td><td>FTXF09AXVJU</td><td class="num">9000</td><td class="num">21.00</td><td class="num">12.50</td><td class="num">10.20</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3361212">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF09BVJU*</td><td>FTXF09BVJU*</td><td class="num">9000</td><td class="num">21.00</td><td class="num">12.50</td><td class="num">10.20</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3893643">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF12AXVJU</td><td>FTXF12AXVJU</td><td class="num">12000</td><td class="num">21.00</td><td class="num">12.50</td><td class="num">10.20</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3361209">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF12BVJU*</td><td>FTXF12BVJU*</td><td class="num">12000</td><td class="num">21.00</td><td class="num">12.50</td><td class="num">10.20</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3893644">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF18BVJU*</td><td>FTXF18BVJU*</td><td class="num">18000</td><td class="num">21.00</td><td class="num">12.00</td><td class="num">9.60</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3998710">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF18AXVJU</td><td>FTXF18AXVJU</td><td class="num">18100</td><td class="num">21.00</td><td class="num">12.00</td><td class="num">9.60</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3361210">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF24AXVJU</td><td>FTXF24AXVJU</td><td class="num">22400</td><td class="num">21.00</td><td class="num">12.00</td><td class="num">9.10</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3361211">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>Daikin</td><td>OTERRA</td><td>RXF24BVJU*</td><td>FTXF24BVJU*</td><td class="num">22400</td><td class="num">21.00</td><td class="num">12.00</td><td class="num">9.50</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3998711">ENERGY STAR record</a></td><td><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Single-zone source</a></td></tr>
+<tr><td>MRCOOL</td><td>DIY Series</td><td>DIY-09-HP-C-115D25-O</td><td>DIY-09-HP-WMAH-115D25-O</td><td class="num">9000</td><td class="num">23.60</td><td class="num">14.00</td><td class="num">11.50</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3798933">ENERGY STAR record</a></td><td><a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">Single-zone source</a></td></tr>
+<tr><td>MRCOOL</td><td>DIY Series</td><td>DIY-12-HP-C-115D25-O</td><td>DIY-12-HP-WMAH-115D25-O</td><td class="num">12000</td><td class="num">23.50</td><td class="num">12.50</td><td class="num">10.20</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3798934">ENERGY STAR record</a></td><td><a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">Single-zone source</a></td></tr>
+<tr><td>MRCOOL</td><td>DIY Series</td><td>DIY-18-HP-C-230D25-O</td><td>DIY-18-HP-WMAH-230D25-O</td><td class="num">18000</td><td class="num">22.50</td><td class="num">13.70</td><td class="num">11.50</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3798935">ENERGY STAR record</a></td><td><a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">Single-zone source</a></td></tr>
+<tr><td>MRCOOL</td><td>DIY Series</td><td>DIY-24-HP-C-230D25-O</td><td>DIY-24-HP-WMAH-230D25-O</td><td class="num">24000</td><td class="num">22.70</td><td class="num">12.70</td><td class="num">9.50</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=3798937">ENERGY STAR record</a></td><td><a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">Single-zone source</a></td></tr>
+<tr><td>Mitsubishi Electric</td><td>M-Series</td><td>MUZ-FS06NA***</td><td>MSZ-FS06NA***</td><td class="num">6000</td><td class="num">32.20</td><td class="num">19.05</td><td class="num">11.90</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=2507901">ENERGY STAR record</a></td><td><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Single-zone source</a></td></tr>
+<tr><td>Mitsubishi Electric</td><td>M-Series</td><td>MUZ-FS09NA***</td><td>MSZ-FS09NA***</td><td class="num">9000</td><td class="num">29.80</td><td class="num">16.05</td><td class="num">10.90</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=2507894">ENERGY STAR record</a></td><td><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Single-zone source</a></td></tr>
+<tr><td>Mitsubishi Electric</td><td>M-Series</td><td>MUZ-FS12NA***</td><td>MSZ-FS12NA***</td><td class="num">12000</td><td class="num">26.30</td><td class="num">13.80</td><td class="num">11.10</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=2507895">ENERGY STAR record</a></td><td><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Single-zone source</a></td></tr>
+<tr><td>Mitsubishi Electric</td><td>M-Series</td><td>MUZ-FS15NA***</td><td>MSZ-FS15NA***</td><td class="num">14000</td><td class="num">22.30</td><td class="num">14.00</td><td class="num">10.40</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=2507897">ENERGY STAR record</a></td><td><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Single-zone source</a></td></tr>
+<tr><td>Mitsubishi Electric</td><td>M-Series</td><td>MUZ-FS18NA***</td><td>MSZ-FS18NA***</td><td class="num">17200</td><td class="num">21.00</td><td class="num">12.50</td><td class="num">10.70</td><td><a href="https://data.energystar.gov/resource/akti-mt5s.json?pd_id=2507899">ENERGY STAR record</a></td><td><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Single-zone source</a></td></tr>
+</tbody>
+</table>
+</div>
+<p><a href="assets/data/mini-split-seer2.csv">Download the same rows as CSV</a>.</p>
+
+<h2>Use it with this calculator</h2>
+<p>The table is a nameplate. The calculator is a room. They answer different questions. One pass through this site’s room-load function, stated inputs: 200 square feet, 8 ft ceiling, 2 windows, average sun (factor 1.00), average insulation (factor 1.00).</p>
+<p>Shell = 200 × 25 × (8 ÷ 8) × 1.00 × 1.00 = 5,000 BTU/hr. Windows = 2 × 600 = 1,200. Subtotal = 6,200. Raw load = 6,200 × 1.10 = 6,820 BTU/hr. Rounded up to the next 500, the planning result is 7,000 BTU/hr. This calculator’s mini-split list then picks 9,000 BTU/hr, the smallest head at or above 7,000.</p>
+<p>A row in the table whose cooling capacity is 6000 Btu/h is below that planning result. A row whose cooling capacity is 9000 Btu/h uses the same integer as the head the calculator picks. That is not a reason to buy one model. SEER2 is not an input to the room-load function. Run the <a href="index.html#calc">calculator</a> for the room, then read a nameplate here if you want the certified ratings.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Where do the cooling capacity, SEER2, EER2, and HSPF2 figures come from?</h3>
+<p>Each figure is copied from the ENERGY STAR Certified Mini-Split Heat Pumps dataset (akti-mt5s) as accessed on October 6, 2026. The record link in the row opens that combination. If a field were blank in the dataset, the cell would say not listed. None of the rows in this table had a blank in those four fields.</p>
+<h3>Does SEER2 change this calculator's BTU result?</h3>
+<p>No. The room-load function does not take SEER2, EER2, or HSPF2 as an input. Those ratings describe the certified combination. The calculator describes the room.</p>
+
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://data.energystar.gov/Active-Specifications/ENERGY-STAR-Certified-Mini-Split-Heat-Pumps/akti-mt5s">ENERGY STAR Certified Mini-Split Heat Pumps</a> — accessed October 6, 2026.</li>
+<li><a href="https://daikincomfort.com/products/heating-cooling/single-split-ductless/heat-pumps/wall-mount-daikin-oterra-heat-pump">Daikin, OTERRA wall-mount single-zone heat pump</a> — accessed October 6, 2026.</li>
+<li><a href="https://www.mitsubishicomfort.com/products/m-series/muz-fs">Mitsubishi Electric, MUZ-FS single-zone heat pump</a> — accessed October 6, 2026.</li>
+<li><a href="https://doxrepo.mrcool.com/mc-diy-5-br-en-01.pdf">MRCOOL, 5th Gen DIY Single Zone Series brochure</a> — accessed October 6, 2026.</li>
+</ul>
+</main>
+<footer>HVACLoadCalc · <a href="index.html">calculator</a> · <a href="mini-split-room-size.html">mini-split guide</a> · Built by Jeremy Panasuk · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<script src="assets/spec-sort.js" defer></script>
+</body>
+</html>

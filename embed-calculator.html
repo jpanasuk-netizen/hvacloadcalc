@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embed the HVAC Load Calculator on Your Site</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="description" content="Free iframe for the HVAC Load Calculator. Same room, mini-split, duct, and baseboard math. Keep the credit link.">
+<link rel="canonical" href="https://hvac-load-calc.com/embed-calculator.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Embed the HVAC Load Calculator on Your Site">
+<meta property="og:description" content="Free iframe for the HVAC Load Calculator. Same room, mini-split, duct, and baseboard math. Keep the credit link.">
+<meta property="og:type" content="article">
+<meta name="twitter:title" content="Embed the HVAC Load Calculator on Your Site">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "HVAC Load Calculator", "item": "https://hvac-load-calc.com/"},
+  {"@type": "ListItem", "position": 2, "name": "Embed the HVAC Load Calculator on Your Site", "item": "https://hvac-load-calc.com/embed-calculator.html"}
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can the credit link be removed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The embed is free if the credit link under the iframe stays, pointing at https://hvac-load-calc.com/."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the embed use different math?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The iframe loads the same functions as the homepage calculator: room load, mini-split head, duct CFM, and baseboard watts."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="topics.html">Topics</a>
+    <a href="embed-calculator.html" aria-current="page">Embed</a>
+  </nav>
+</header>
+<main>
+<h1>Embed the HVAC Load Calculator on Your Site</h1>
+<p class="sub">The iframe is the same four tabs as the homepage. It has no ads and no affiliate links.</p>
+
+<h2>Preview</h2>
+<iframe src="embed.html" title="HVAC Load Calculator" width="100%" height="560" style="border:1px solid var(--bd);max-width:100%;background:transparent"></iframe>
+
+<h2>Copy this</h2>
+<p>Paste the iframe and the credit line together.</p>
+<textarea id="embedCode" rows="6" readonly style="width:100%;font:13px/1.45 ui-monospace,monospace;padding:.6rem;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg)">&lt;iframe src="https://hvac-load-calc.com/embed.html" title="HVAC Load Calculator" width="100%" height="560" style="border:0;max-width:100%;"&gt;&lt;/iframe&gt;
+&lt;p&gt;Calculator by &lt;a href="https://hvac-load-calc.com/"&gt;HVAC Load Calculator&lt;/a&gt;&lt;/p&gt;</textarea>
+<p><button type="button" id="copyEmbed">Copy embed code</button></p>
+
+<h2>Terms</h2>
+<p>The embed is free. Keep the credit link under the iframe, as a normal link to https://hvac-load-calc.com/. Do not hide that link, rewrite it, or drop it. The calculator is a planning estimate, not an ACCA Manual J. Questions: <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Can the credit link be removed?</h3>
+<p>No. The embed is free if the credit link under the iframe stays, pointing at https://hvac-load-calc.com/.</p>
+<h3>Does the embed use different math?</h3>
+<p>No. The iframe loads the same functions as the homepage calculator: room load, mini-split head, duct CFM, and baseboard watts.</p>
+</main>
+<footer>HVACLoadCalc · <a href="index.html">calculator</a> · <a href="topics.html">topics</a> · Built by Jeremy Panasuk · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<script>
+document.getElementById("copyEmbed").addEventListener("click", function () {
+  var box = document.getElementById("embedCode");
+  var text = box.value;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text);
+  } else {
+    box.focus();
+    box.select();
+  }
+});
+</script>
+</body>
+</html>

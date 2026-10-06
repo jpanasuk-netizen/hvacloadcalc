@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Load Calculator</title>
+<link rel="canonical" href="https://hvac-load-calc.com/">
+<meta name="robots" content="noindex, follow">
+<style>
+:root{color-scheme:light dark;--bg:#f4f5f7;--fg:#1c1f24;--card:#fff;--line:#d0d4dc;--acc:#0b57d0;--mut:#57606a}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e7e8ea;--card:#1c1f24;--line:#333840;--acc:#8ab4f8;--mut:#a8b0ba}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.4 Verdana,sans-serif}
+.wrap{padding:12px 12px 16px}
+h1{font-size:16px;margin:0 0 8px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.tabs button{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;cursor:pointer;font:inherit}
+.tabs button[aria-selected="true"]{border-color:var(--acc);color:var(--acc)}
+.panel{display:none}
+.panel.active{display:block}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+label{display:block;font-size:12px;color:var(--mut);margin-bottom:2px}
+input,select{width:100%;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
+button.go{margin-top:10px;background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 12px;font:inherit;cursor:pointer}
+.ans{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px}
+.ans .big{font-size:1.35rem;font-weight:700}
+.ans .unit{font-size:.8rem;font-weight:400;color:var(--mut)}
+.ans .grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
+.ans .stat b{display:block}
+.ans .stat span{color:var(--mut);font-size:12px}
+.ans .note{font-size:12px;color:var(--mut);margin:.4rem 0 0}
+.credit{margin:12px 0 0;font-size:12px;color:var(--mut)}
+.credit a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>HVAC Load Calculator</h1>
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-btu', this)">Room BTU</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-ms', this)">Mini-split</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-duct', this)">Duct CFM</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-bb', this)">Baseboard</button>
+</div>
+
+<section id="tab-btu" class="panel active" role="tabpanel">
+  <div class="grid">
+    <div><label for="rmSqft">Room size (sq ft)</label><input type="number" id="rmSqft" min="1"></div>
+    <div><label for="rmHt">Ceiling height (ft)</label><input type="number" id="rmHt" value="8" min="6" max="20" step="0.5"></div>
+    <div><label for="rmWin">Windows</label><input type="number" id="rmWin" value="2" min="0" max="12"></div>
+    <div><label for="rmSun">Sun exposure</label>
+      <select id="rmSun"><option value="shaded">Shaded</option><option value="average" selected>Average</option><option value="sunny">Very sunny</option></select>
+    </div>
+    <div><label for="rmIns">Insulation</label>
+      <select id="rmIns"><option value="good">Good</option><option value="average" selected>Average</option><option value="poor">Poor</option></select>
+    </div>
+    <div><label for="rmDir">Room use</label>
+      <select id="rmDir"><option value="bedroom">Bedroom</option><option value="living" selected>Living room</option><option value="kitchen">Kitchen</option></select>
+    </div>
+  </div>
+  <button class="go" onclick="calcRoomBTU()">Calculate room BTU</button>
+  <div id="rmResult" class="ans" hidden></div>
+</section>
+
+<section id="tab-ms" class="panel" role="tabpanel">
+  <div class="grid">
+    <div><label for="msZones">Zones</label><select id="msZones"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+    <div><label for="msSqft">Area (sq ft)</label><input type="number" id="msSqft" min="1"></div>
+    <div><label for="msHt">Ceiling height (ft)</label><input type="number" id="msHt" value="8" min="6" max="20" step="0.5"></div>
+    <div><label for="msWin">Windows</label><input type="number" id="msWin" value="2" min="0" max="20"></div>
+    <div><label for="msSun">Sun exposure</label>
+      <select id="msSun"><option value="shaded">Shaded</option><option value="average" selected>Average</option><option value="sunny">Very sunny</option></select>
+    </div>
+    <div><label for="msIns">Insulation</label>
+      <select id="msIns"><option value="good">Good</option><option value="average" selected>Average</option><option value="poor">Poor</option></select>
+    </div>
+  </div>
+  <button class="go" onclick="calcMiniSplit()">Size the mini-split</button>
+  <div id="msResult" class="ans" hidden></div>
+</section>
+
+<section id="tab-duct" class="panel" role="tabpanel">
+  <div class="grid">
+    <div><label for="dcBtu">Equipment rating (BTU/hr)</label><input type="number" id="dcBtu" min="1"></div>
+    <div><label for="dcDt">Temperature split ΔT (°F)</label><input type="number" id="dcDt" value="20" min="5" max="60"></div>
+    <div><label for="dcRooms">Supply runs</label><input type="number" id="dcRooms" value="1" min="1" max="30"></div>
+  </div>
+  <button class="go" onclick="calcDuct()">Calculate CFM</button>
+  <div id="dcResult" class="ans" hidden></div>
+</section>
+
+<section id="tab-bb" class="panel" role="tabpanel">
+  <div class="grid">
+    <div><label for="bbSqft">Room size (sq ft)</label><input type="number" id="bbSqft" min="1"></div>
+    <div><label for="bbIns">Insulation</label>
+      <select id="bbIns"><option value="good">Good</option><option value="average" selected>Average</option><option value="poor">Poor</option></select>
+    </div>
+    <div><label for="bbV">Circuit voltage</label><select id="bbV"><option>120</option><option selected>240</option></select></div>
+    <div><label for="bbCold">Cold climate?</label><select id="bbCold"><option value="no">No</option><option value="yes">Yes</option></select></div>
+  </div>
+  <button class="go" onclick="calcBaseboard()">Calculate baseboard watts</button>
+  <div id="bbResult" class="ans" hidden></div>
+</section>
+
+<p class="credit">Calculator by <a href="https://hvac-load-calc.com/" target="_blank" rel="noopener">HVAC Load Calculator</a></p>
+</div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

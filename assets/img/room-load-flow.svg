@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320">
+  <rect width="720" height="320" fill="#f6f8fa"/>
+  <g font-family="Verdana, sans-serif" fill="#1f2328">
+    <text x="24" y="36" font-size="16" font-weight="700">Room load in this calculator</text>
+    <g font-size="13">
+      <rect x="24" y="56" width="150" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="99" y="85" text-anchor="middle">sq ft × 25</text>
+      <rect x="198" y="56" width="150" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="273" y="85" text-anchor="middle">× ceiling ÷ 8</text>
+      <rect x="372" y="56" width="150" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="447" y="85" text-anchor="middle">× sun factor</text>
+      <rect x="546" y="56" width="150" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="621" y="85" text-anchor="middle">× insulation</text>
+      <rect x="24" y="140" width="210" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="129" y="169" text-anchor="middle">+ 600 per window</text>
+      <rect x="258" y="140" width="150" height="48" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="333" y="169" text-anchor="middle">× 1.10</text>
+      <rect x="432" y="140" width="264" height="48" rx="6" fill="#ffffff" stroke="#0969da"/>
+      <text x="564" y="169" text-anchor="middle">round up to the next 500</text>
+    </g>
+    <text x="24" y="230" font-size="13" fill="#57606a">Sun: sunny ×1.15, average ×1.0, shaded ×0.90.</text>
+    <text x="24" y="252" font-size="13" fill="#57606a">Insulation: poor ×1.25, average ×1.0, good ×0.85.</text>
+    <text x="24" y="286" font-size="13" fill="#57606a">These are this calculator's factors, not a published range.</text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260">
+  <rect width="720" height="260" fill="#f6f8fa"/>
+  <g font-family="Verdana, sans-serif" fill="#1f2328">
+    <text x="24" y="36" font-size="16" font-weight="700">Adjustments after the 25 BTU/hr baseline</text>
+    <g font-size="14">
+      <rect x="24" y="60" width="320" height="52" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="40" y="91">Sun: +15% / 10%</text>
+      <rect x="368" y="60" width="328" height="52" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="384" y="91">Insulation: +25% / 15%</text>
+      <rect x="24" y="128" width="320" height="52" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="40" y="159">Windows: +600 BTU each</text>
+      <rect x="368" y="128" width="328" height="52" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+      <text x="384" y="159">Ceiling: × height ÷ 8</text>
+    </g>
+    <text x="24" y="220" font-size="13" fill="#57606a">Then a 10% margin, rounded up to the nearest 500 BTU.</text>
+  </g>
+</svg>

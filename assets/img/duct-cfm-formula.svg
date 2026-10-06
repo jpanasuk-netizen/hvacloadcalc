@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240">
+  <rect width="720" height="240" fill="#f6f8fa"/>
+  <g font-family="Verdana, sans-serif" fill="#1f2328">
+    <text x="24" y="40" font-size="16" font-weight="700">Duct airflow from this calculator</text>
+    <text x="24" y="92" font-size="22">CFM = BTU/hr ÷ (”T × 1.08)</text>
+    <text x="24" y="140" font-size="16">24,000 ÷ (20 × 1.08) = 1,111 CFM</text>
+    <text x="24" y="184" font-size="13" fill="#57606a">20°F is an input to the worked example on this page, not a typical split.</text>
+    <text x="24" y="208" font-size="13" fill="#57606a">1,111 is ductCFM(24000, 20) rounded the way this page's chart rounds it.</text>
+  </g>
+</svg>
