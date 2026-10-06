@@ -91,6 +91,7 @@
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any",
   "url": "https://hvac-load-calc.com/",
+  "dateModified": "2026-10-06",
   "description": "Room-by-room BTU, mini-split size, duct CFM, and baseboard watts — Manual-J-inspired rule-of-thumb math that shows its work. Free, no signup.",
   "offers": {
     "@type": "Offer",
@@ -116,6 +117,8 @@
 
 <main>
 <h1>HVAC Load Calculator</h1>
+<p class="small">Last updated: October 6, 2026</p>
+<div class="answer-box"><strong>Quick answer:</strong> This calculator starts at 25 BTU/hr per square foot, then applies ceiling height ÷ 8, a sun factor (shaded ×0.90, average ×1.00, very sunny ×1.15), an insulation factor (good ×0.85, average ×1.00, poor ×1.25), and 600 BTU/hr per window. It adds 10% and rounds up to the nearest 500 BTU. Mini-split heads on this page are 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr; duct airflow is CFM = BTU/hr ÷ (ΔT × 1.08); baseboard watts are BTU/hr ÷ 3.41.</div>
 <p class="magnet-cta" data-magnet-cta="1"><a href="magnet.html">Free BTU room chart — print it.</a></p>
 <p class="sub">Room-by-room HVAC sizing for DIY mini-split installs.</p>
 <p class="sub">Room-by-room BTU, mini-split size, duct CFM, and baseboard watts — Manual-J-inspired rule-of-thumb math that shows its work. Free, no signup.</p>
@@ -174,6 +177,7 @@
   </div>
   <button onclick="calcRoomBTU()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate room BTU</button>
   <div id="rmResult" class="ans" hidden></div>
+  <p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
   <div id="matchedCta" hidden></div>
   <div class="affil">
     <span class="tag">Affiliate</span>
@@ -415,10 +419,11 @@
 </section>
 
 
-<footer>HVACLoadCalc · free HVAC sizing tools for homeowners and DIYers · pages may contain affiliate links · estimates are rule-of-thumb and not a substitute for a full ACCA Manual J · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="embed-calculator.html">Embed this calculator</a> · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
+<footer>HVACLoadCalc · free HVAC sizing tools for homeowners and DIYers · pages may contain affiliate links · estimates are rule-of-thumb and not a substitute for a full ACCA Manual J · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="embed-calculator.html">Embed this calculator</a> · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a> · <a href="/methodology.html">Methodology</a></footer>
 
 <script src="assets/app.js" defer></script>
 <script src="assets/monetization.js" defer></script>
+<script src="assets/permalink.js" defer></script>
 
 
 <div id="amzSticky" hidden aria-hidden="true">

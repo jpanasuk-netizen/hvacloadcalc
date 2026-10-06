@@ -103,3 +103,5 @@ code{background:var(--card);border:1px solid var(--bd);border-radius:5px;padding
 #amzSticky .btn-amz-primary{width:auto;flex:1;max-width:420px}
 #amzSticky .dismiss{background:transparent;border:1px solid var(--bd,#333);color:var(--mut,#999);border-radius:8px;padding:.45rem .7rem;cursor:pointer;min-height:44px}
 body{padding-bottom:4.5rem}
+.result-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.8rem}
+.result-actions button{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:8px;padding:.4rem .7rem;font:inherit;font-size:.85rem;cursor:pointer}

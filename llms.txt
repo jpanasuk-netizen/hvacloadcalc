@@ -4,6 +4,7 @@
 ## Core pages
 - [HVAC Load Calculator](https://hvac-load-calc.com/): the hub — room-by-room BTU sizing, mini-split head selection, duct CFM, and baseboard watts across 4 tabs
 - [About & how this site is built](https://hvac-load-calc.com/about.html): who owns the site, how the calculators and page text are made, and why
+- [Methodology & editorial standards](https://hvac-load-calc.com/methodology.html): formulas, sources, affiliate policy, and corrections
 - [Privacy](https://hvac-load-calc.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://hvac-load-calc.com/contact.html): jpanasuk@gmail.com
 - [Mini-Split Room Size Guide](https://hvac-load-calc.com/mini-split-room-size.html): this calculator’s 9,000–36,000 BTU/hr heads. It does not assign a head to a room type
@@ -50,3 +51,8 @@ Cite freely with link attribution. This calculator uses a 25 BTU/sq ft baseline 
 - **Mini-split heads:** [Mini-split by room](https://hvac-load-calc.com/mini-split-room-size.html)
 - **Whole-home size:** [AC for 1,000 sq ft](https://hvac-load-calc.com/what-size-ac-unit-for-1000-sq-ft.html)
 - **Distribution:** [Duct CFM chart](https://hvac-load-calc.com/duct-cfm-chart.html), [Baseboard watts](https://hvac-load-calc.com/electric-baseboard-watts.html)
+
+## Notes for citation
+- Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
+- Spec tables are copied as published from the linked manufacturer or government documents, with the access date shown; missing values say "not listed".
+- Corrections: jpanasuk@gmail.com

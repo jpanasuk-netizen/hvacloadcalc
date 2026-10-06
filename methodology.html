@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Methodology &amp; Editorial Standards</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
+<meta name="description" content="How the HVAC Load Calculator gets its numbers, how pages are written, and the affiliate rules.">
+<link rel="canonical" href="https://hvac-load-calc.com/methodology.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="HVAC Methodology &amp; Editorial Standards">
+<meta property="og:description" content="How the HVAC Load Calculator gets its numbers, how pages are written, and the affiliate rules.">
+<meta property="og:url" content="https://hvac-load-calc.com/methodology.html">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HVAC Methodology & Editorial Standards",
+  "url": "https://hvac-load-calc.com/methodology.html",
+  "dateModified": "2026-10-06",
+  "publisher": {"@type": "Organization", "name": "HVAC Load Calculator"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "HVAC Load Calculator", "item": "https://hvac-load-calc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "HVAC Methodology & Editorial Standards", "item": "https://hvac-load-calc.com/methodology.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">HVACLoadCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html">Calculator</a>
+    <a href="about.html">About</a>
+    <a href="topics.html">Topics</a>
+  </nav>
+</header>
+<main>
+<h1>HVAC Methodology &amp; Editorial Standards</h1>
+<p class="small">Last updated: October 6, 2026</p>
+
+<h2>How the calculator works</h2>
+<p>The room-load function on the <a href="index.html#calc">calculator</a> is a planning estimate, not a measured result and not a full ACCA Manual J. It starts at 25 BTU/hr per square foot. It multiplies by ceiling height ÷ 8, by a sun factor, and by an insulation factor, then adds 600 BTU/hr for each window. Sun factors are shaded ×0.90, average ×1.00, and very sunny ×1.15. Insulation factors are good ×0.85, average ×1.00, and poor ×1.25. The total is multiplied by 1.10 (a 10% margin) and rounded up to the nearest 500 BTU.</p>
+<p>Mini-split heads on this site are 9,000, 12,000, 15,000, 18,000, 24,000, 30,000, and 36,000 BTU/hr. The mini-split tab picks the smallest head at or above that room load.</p>
+<p>Duct airflow uses CFM = BTU/hr ÷ (ΔT × 1.08). The duct tab takes the equipment rating in BTU/hr. Electric baseboard watts are BTU/hr ÷ 3.41. The U.S. Department of Energy's <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">Guide to Home Heating and Cooling</a> equates one ton of cooling with 12,000 Btu. That ton figure is a unit conversion, not this calculator's room-load baseline.</p>
+
+<h2>Where the numbers come from</h2>
+<p>Factor tables on the calculator page state the 25 BTU/hr baseline, the sun and insulation multipliers, the window adder, and the 10% margin. Guide pages that quote a government chart link that chart in the sentence and again under Sources.</p>
+<p>The <a href="mini-split-seer2-chart.html">mini-split BTU and SEER2 chart</a> copies cooling capacity, SEER2, EER2, and HSPF2 exactly as published. Every row links its ENERGY STAR record and the single-zone source used to keep that family. The access date on that page is October 6, 2026. A blank field would say "not listed". Nothing on that chart is estimated. The same rows are in <a href="assets/data/mini-split-seer2.csv">the CSV</a>.</p>
+
+<h2>How pages are written</h2>
+<p>Page text is drafted with AI agents (Cursor and local models) from those sources.</p>
+<p>Built and owned by Jeremy Panasuk, New Auburn, WI.</p>
+
+<h2>Affiliate policy</h2>
+<p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
+<p>Amazon links use the Associates tag generatorsi0d-20. The disclosure sits before the first affiliate link. Those links do not change calculator output. There are no paid placements.</p>
+
+<h2>Corrections</h2>
+<p>Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a> with the page URL.</p>
+
+<h2>Safety scope</h2>
+<p>Not a substitute for a licensed contractor/electrician or the equipment manual. The <a href="about.html">about page</a> says the same limit in its own words: this is not a Manual J, and the owner is not a licensed HVAC contractor.</p>
+</main>
+<footer>HVACLoadCalc · free HVAC sizing tools · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+</body>
+</html>
