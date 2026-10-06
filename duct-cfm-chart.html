@@ -9,13 +9,16 @@
 <meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
-<meta name="description" content="Duct CFM from the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08). Worked charts by tonnage and ΔT, per-run airflow, CFM per ton sanity checks, and where...">
-<link rel="canonical" href="https://hvac-load-calc.com/duct-cfm-chart.html">>
+<meta name="description" content="Duct CFM is BTU/hr ÷ (ΔT × 1.08). A 36,000 BTU/hr system at a 20°F split is 1,667 CFM. Duct diameter is Manual D.">
+<link rel="canonical" href="https://hvac-load-calc.com/duct-cfm-chart.html">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Duct CFM Chart — the BTU ÷ (ΔT × 1.08) Guide">
-<meta property="og:description" content="Worked CFM charts by tonnage and temperature split, per-run airflow, and how CFM connects to duct size.">
+<meta property="og:description" content="Duct CFM is BTU/hr ÷ (ΔT × 1.08). A 36,000 BTU/hr system at a 20°F split is 1,667 CFM. Duct diameter is Manual D.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="assets/styles.css">
+
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,43 +26,51 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How many CFM per ton of air conditioning?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The rule of thumb is about 400 CFM per ton of cooling — 2 tons ≈ 800 CFM, 3 tons ≈ 1,200 CFM. Dry climates often run lower (300–350 CFM/ton) to get a colder, drier supply; humid climates run higher (400–450) for better dehumidification. It follows directly from CFM = BTU/hr ÷ (ΔT × 1.08) at a 20°F split." }
+      "name": "How many CFM is a 3-ton system at a 20°F split?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ductCFM(36000, 20) is 36,000 ÷ (20 × 1.08) = 1,666.666… CFM. This page’s chart rounds that to 1,667. One ton is 12,000 BTU/hr, so 3 tons is 36,000 BTU/hr."
+      }
     },
     {
       "@type": "Question",
-      "name": "How do I calculate duct CFM from BTU?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature difference and 1.08 is a constant (0.075 lb/cu ft air density × 0.24 BTU/lb-°F specific heat × 60 min/hr). A 24,000 BTU/hr system at ΔT 20 needs 24,000 ÷ 21.6 ≈ 1,111 CFM." }
+      "name": "Does that CFM pick the duct diameter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ACCA Manual D sizes the duct from friction rate, material, and available static pressure. The CFM is the airflow target. A diameter guessed from CFM alone is not a Manual D."
+      }
     },
     {
       "@type": "Question",
-      "name": "Does CFM tell me what duct diameter to use?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Not by itself. CFM is the airflow requirement; duct diameter comes from friction rate, duct material, and available static pressure — the domain of ACCA Manual D. As a sanity anchor only, a main trunk at 1,000 CFM wants roughly a 12–14 inch round duct or equivalent rectangular at typical residential friction rates; anything real should be duct-designed, not guessed." }
+      "name": "Why is 400 CFM per ton not the same as the 20°F column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "400 CFM per ton on this page is the 28°F worked example: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, or about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM. The chart’s three columns are three different splits, not three ways of writing 400."
+      }
     }
   ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "ACCA Manual J Residential Load Calculation",
-      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "HVAC Load Calculator",
+   "item": "https://hvac-load-calc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Duct CFM: the BTU ÷ (ΔT × 1.08) guide",
+   "item": "https://hvac-load-calc.com/duct-cfm-chart.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
 <body>
 
@@ -69,8 +80,6 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <a href="index.html#calc">Calculator</a>
     <a href="mini-split-room-size.html">Mini-split by room</a>
     <a href="electric-baseboard-watts.html">Baseboard watts</a>
-    <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a>
-    <a href="https://solar-sizer.com/" rel="noopener">SolarSizer ↗</a>
   </nav>
 </header>
 
@@ -126,31 +135,38 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <p>Size the equipment first in the <a href="index.html#calc">HVAC load calculator</a>, then work its BTU through the CFM calculator above.</p>
 <p>A clogged filter restricts the airflow this chart assumes: <a href="how-to-clean-an-air-conditioner-filter.html">how to clean an air conditioner filter</a>. The loop that airflow serves is <a href="how-does-an-air-conditioner-work.html">how an air conditioner works</a>.</p>
+
+
+<h2>Worked example on this site’s duct tab</h2>
+<p>The duct tab calls <code>ductCFM</code>: BTU/hr ÷ (ΔT × 1.08). One ton is 12,000 BTU/hr, so a 3-ton cooling rate is 36,000 BTU/hr and a 2-ton rate is 24,000 BTU/hr. At a 20°F supply-to-return split, ΔT × 1.08 is 21.6. <code>ductCFM(36000, 20)</code> is 36,000 ÷ 21.6 = 1,666.666… CFM, and the ΔT 20 column above rounds that to 1,667. <code>ductCFM(24000, 20)</code> is 24,000 ÷ 21.6 = 1,111.111… CFM, which that column rounds to 1,111. Split the 2-ton result across 6 supply runs and each run is 1,111.111 ÷ 6 = 185.185 CFM.</p>
+<p>Open the <a href="index.html#calc">calculator</a>, choose Duct CFM, and enter 36000 with a ΔT of 20, or 24000 with a ΔT of 20. The result card shows the unrounded quotient. Square footage does not belong in that tab. The room-BTU tab is where square footage, ceiling height, windows, sun, and insulation are entered. CFM starts from a BTU/hr figure you already have.</p>
+<p>The ~400 CFM per ton shorthand on this page is the 28°F example already shown above, not the 20°F column. 24,000 ÷ (28 × 1.08) = 24,000 ÷ 30.24 ≈ 794 CFM, and 794 ÷ 2 ≈ 397 CFM per ton. At ΔT 20 the same 24,000 BTU/hr is 1,111 CFM, about 556 CFM per ton. Using 400 CFM per ton when the split is 20°F understates the airflow the formula returns.</p>
+
+<h2>Common mistake</h2>
+<p>Reading a duct diameter off the CFM. The formula returns an airflow. Diameter, friction rate, and available static pressure are <a href="https://www.acca.org/standards/technical-manuals/manual-d">ACCA Manual D</a>. The approximate branch table on this page is a sanity check, not a design, and it is not a Manual D friction-rate table. The <a href="https://www.ashrae.org/technical-resources/ashrae-handbook">ASHRAE handbook</a> is the engineering reference for the air-side quantities. It does not replace a measurement of the equipment’s external static pressure, and the blower still has to be able to move the CFM against that pressure.</p>
+<p>The other mistake is typing the room’s square footage into the duct tab and treating the result as a system size. Size the equipment on the room-BTU tab, or from a Manual J, then bring that BTU/hr here.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>How many CFM is a 3-ton system at a 20°F split?</h3>
+<p>ductCFM(36000, 20) is 36,000 ÷ (20 × 1.08) = 1,666.666… CFM. This page’s chart rounds that to 1,667. One ton is 12,000 BTU/hr, so 3 tons is 36,000 BTU/hr.</p>
+<h3>Does that CFM pick the duct diameter?</h3>
+<p>No. ACCA Manual D sizes the duct from friction rate, material, and available static pressure. The CFM is the airflow target. A diameter guessed from CFM alone is not a Manual D.</p>
+<h3>Why is 400 CFM per ton not the same as the 20°F column?</h3>
+<p>400 CFM per ton on this page is the 28°F worked example: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, or about 397 CFM per ton. At a 20°F split the same 24,000 BTU/hr is 1,111 CFM. The chart’s three columns are three different splits, not three ways of writing 400.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
+<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+</section>
 </main>
 
-<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> · <a href="https://battery-bank-sizer.com/" rel="noopener">Battery Bank Sizer</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 
 
-<section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">
-<h2>Frequently asked questions</h2>
-<details><summary>Is this calculator free?</summary><p>Yes — free to use, no signup, no email required.</p></details>
-<details><summary>How accurate is the estimate?</summary><p>Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing.</p></details>
-<details><summary>Can I use this on mobile?</summary><p>Yes — the page is fully responsive and works on phones, tablets, and desktop.</p></details>
-</section>
 
-<nav class="seo-nav" aria-label="Related calculators" style="margin-top:2rem;padding:1rem;border-top:1px solid #ccc;font-size:.9rem">
-<strong>More free calculators:</strong><br>
-  <a href="/duct-cfm-chart.html">Duct CFM Calculator &amp; Chart</a>
-  <a href="/electric-baseboard-watts.html">How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</a>
-  <a href="/how-many-btu-per-square-foot.html">How Many BTU Per Square Foot? The 20–30 Rule and Its Adjustments (2026)</a>
-  <a href="/index.html">HVAC Load Calculator [Free] | HVACLoadCalc</a>
-  <a href="/magnet.html">Free Mini-Split BTU Room Chart</a>
-  <a href="/mini-split-room-size.html">What Size Mini-Split Do I Need For Each Room? BTU-by-Room Guide (2026)</a>
-  <a href="/topics.html">Topic map</a>
-  <a href="/what-size-ac-unit-for-1000-sq-ft.html">What Size AC Unit for 1,000 Sq Ft? BTU Math + Ton Chart (2026)</a>
-</nav>
 
 </body>
 </html>

@@ -11,10 +11,7 @@
 - [Duct CFM Guide](https://hvac-load-calc.com/duct-cfm-chart.html): worked CFM charts by tonnage and ΔT, per-run airflow, branch duct capacity table
 
 ## Related (sister sites)
-- [GeneratorSizer](https://generator-sizer.com/): generator sizing by appliance loads, runtime, and fuel burn
-- [SolarSizer](https://solar-sizer.com/): solar array and battery sizing
-- [WeldingCalc](https://welding-calculator.com/): welding amperage, duty cycle, and circuit sizing
-- [Battery Bank Sizer](https://battery-bank-sizer.com/): LiFePO4/AGM bank sizing for off-grid setups
+- [GeneratorSizer](https://generator-sizer.com/): running a central air conditioner on a generator (an electrical load, not a BTU)
 
 ## Use policy
 Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC planning estimates (20–30 BTU/sq ft baseline with published adjustment factors), explicitly NOT a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
@@ -27,6 +24,8 @@ Cite freely with link attribution. Sizing figures are rule-of-thumb HVAC plannin
 - [Improve air conditioner efficiency](https://hvac-load-calc.com/how-to-improve-air-conditioner-efficiency.html): DOE thermostat, fan, and filter steps, and a shaded-versus-sunny calculator run
 - [Dispose of an air conditioner](https://hvac-load-calc.com/how-to-dispose-of-an-air-conditioner.html): EPA Section 608 recovery before disposal
 - [BTU to kW](https://hvac-load-calc.com/btu-to-kw.html): DOE's 3,412 Btu/h per kW beside this calculator's ÷ 3.41, including electric furnace coils
+- [How long air conditioners last](https://hvac-load-calc.com/how-long-do-air-conditioners-last.html): DOE life spans and ENERGY STAR's replace line, then resize
+- [Heat pump sizing](https://hvac-load-calc.com/heat-pump-sizing.html): heating load versus cooling load; SolarSizer is linked only from this page, for the outdoor unit's electricity
 
 ## Questions
 - [150 sq ft room air conditioner](https://hvac-load-calc.com/what-size-air-conditioner-for-150-sq-ft-room.html): ENERGY STAR boundary, 5,000 or 6,000 BTU/hr

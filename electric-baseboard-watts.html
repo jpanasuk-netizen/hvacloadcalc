@@ -3,63 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Many Watts of Electric Baseboard Heat Per Square Foot...</title>
+<title>Electric Baseboard Watts per Square Foot</title>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
-<meta name="description" content="Electric baseboard sizing: 7–10 watts per square foot rule, the watts = BTU/hr ÷ 3.41 conversion, room-by-room wattage table, 120 vs 240 V circuits, and...">
-<link rel="canonical" href="https://hvac-load-calc.com/electric-baseboard-watts.html">>
+<meta name="description" content="Electric baseboard sizing: 7–10 watts per square foot, watts = BTU/hr ÷ 3.41, a room-by-room table, and 120 V versus 240 V circuits.">
+<link rel="canonical" href="https://hvac-load-calc.com/electric-baseboard-watts.html">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Electric Baseboard Watts Per Square Foot — Sizing Guide">
-<meta property="og:description" content="The 7–10 W/sq ft rule, the ÷3.41 BTU conversion, worked room examples, and circuit math at 240 V.">
+<meta property="og:title" content="Electric Baseboard Watts per Square Foot">
+<meta property="og:description" content="Electric baseboard sizing: 7–10 watts per square foot, watts = BTU/hr ÷ 3.41, a room-by-room table, and 120 V versus 240 V circuits.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="assets/styles.css">
+
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How many watts of electric baseboard heat do I need per square foot?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Plan on 7–10 watts per square foot. Use about 10 W/sq ft for poor insulation, cold climates, or ceilings over 8 feet, and closer to 7 for tight, well-insulated rooms in moderate climates. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts total, often split across two heaters." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I convert BTU/hr to watts for heating?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Divide BTU/hr by 3.41 — one watt equals about 3.41 BTU/hr. A 1,500 W space heater produces about 5,115 BTU/hr; a 10,000 BTU/hr heat load needs about 2,933 watts of electric resistance heat. Always round up to the available heater sizes." }
-    },
-    {
-      "@type": "Question",
-      "name": "Should electric baseboard be 120V or 240V?",
-      "acceptedAnswer": { "@type": "Answer", "text": "240V for anything over about 1,000 watts. At the same wattage, 240 V draws half the amps of 120 V — a 2,000 W heater pulls 16.7 A at 120 V (needs a 20 A circuit alone) versus 8.3 A at 240 V, which pairs comfortably with a 15 A circuit. Nearly all fixed baseboard in North America is 240 V." }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "HVAC Load Calculator",
+   "item": "https://hvac-load-calc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "How many watts of electric baseboard heat per square foot?",
+   "item": "https://hvac-load-calc.com/electric-baseboard-watts.html"
+  }
+ ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
-{
-  "sources": [
-    {
-      "title": "ACCA Manual J Residential Load Calculation",
-      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
-      "date": "2026-10-02"
-    }
-  ]
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
 <body>
 
@@ -69,8 +47,6 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <a href="index.html#calc">Calculator</a>
     <a href="mini-split-room-size.html">Mini-split by room</a>
     <a href="duct-cfm-chart.html">Duct CFM guide</a>
-    <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a>
-    <a href="https://battery-bank-sizer.com/" rel="noopener">Battery Bank Sizer ↗</a>
   </nav>
 </header>
 
@@ -133,31 +109,20 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <p>Run your exact room in the <a href="index.html#calc">baseboard watts calculator</a>.</p>
 <p>Furnace and heat-pump strip coils use the same kind of conversion, with DOE's 3,412 Btu/h per kW set next to this page's ÷ 3.41: <a href="btu-to-kw.html">BTU to kW</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
+<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+</section>
 </main>
 
-<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="https://solar-sizer.com/" rel="noopener">SolarSizer</a> · <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 
 
-<section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">
-<h2>Frequently asked questions</h2>
-<details><summary>Is this calculator free?</summary><p>Yes — free to use, no signup, no email required.</p></details>
-<details><summary>How accurate is the estimate?</summary><p>Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing.</p></details>
-<details><summary>Can I use this on mobile?</summary><p>Yes — the page is fully responsive and works on phones, tablets, and desktop.</p></details>
-</section>
 
-<nav class="seo-nav" aria-label="Related calculators" style="margin-top:2rem;padding:1rem;border-top:1px solid #ccc;font-size:.9rem">
-<strong>More free calculators:</strong><br>
-  <a href="/duct-cfm-chart.html">Duct CFM Calculator &amp; Chart</a>
-  <a href="/electric-baseboard-watts.html">How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</a>
-  <a href="/how-many-btu-per-square-foot.html">How Many BTU Per Square Foot? The 20–30 Rule and Its Adjustments (2026)</a>
-  <a href="/index.html">HVAC Load Calculator [Free] | HVACLoadCalc</a>
-  <a href="/magnet.html">Free Mini-Split BTU Room Chart</a>
-  <a href="/mini-split-room-size.html">What Size Mini-Split Do I Need For Each Room? BTU-by-Room Guide (2026)</a>
-  <a href="/topics.html">Topic map</a>
-  <a href="/what-size-ac-unit-for-1000-sq-ft.html">What Size AC Unit for 1,000 Sq Ft? BTU Math + Ton Chart (2026)</a>
-</nav>
 
 </body>
 </html>

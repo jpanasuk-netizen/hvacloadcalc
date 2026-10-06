@@ -44,6 +44,8 @@
   ]
 }
 </script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,19 +54,44 @@
     {
       "@type": "Question",
       "name": "How do you convert BTU per hour to kilowatts?",
-      "acceptedAnswer": {"@type": "Answer", "text": "DOE's Building America forced-air guide divides Btu/h by 3,412 to get kilowatts of electric resistance heat. This site's baseboard function divides BTU/hr by 3.41, which is watts, and you divide by 1,000 for kilowatts. The two divisors are 3.412 and 3.41 Btu/h per watt."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DOE's Building America forced-air guide divides Btu/h by 3,412 to get kilowatts of electric resistance heat. This site's baseboard function divides BTU/hr by 3.41, which is watts, and you divide by 1,000 for kilowatts. The two divisors are 3.412 and 3.41 Btu/h per watt."
+      }
     },
     {
       "@type": "Question",
       "name": "How big is an electric furnace in DOE's worked example?",
-      "acceptedAnswer": {"@type": "Answer", "text": "In the Building America example, a heat pump rated 22,600 Btu/h at 47°F needs 22,600 ÷ 3,412 = 6.62 kW of emergency electric resistance heat if the compressor fails. Supplemental heat for the gap between 22,600 and 14,000 Btu/h is 8,600 ÷ 3,412 = 2.52 kW. Coils in that guide come in 5, 8, 10, 15, and 20 kW, and two staged 5 kW coils cover the 6.62 kW emergency figure."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Building America example, a heat pump rated 22,600 Btu/h at 47°F needs 22,600 ÷ 3,412 = 6.62 kW of emergency electric resistance heat if the compressor fails. Supplemental heat for the gap between 22,600 and 14,000 Btu/h is 8,600 ÷ 3,412 = 2.52 kW. Coils in that guide come in 5, 8, 10, 15, and 20 kW, and two staged 5 kW coils cover the 6.62 kW emergency figure."
+      }
     },
     {
       "@type": "Question",
       "name": "Can I size an electric furnace from square footage?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. DOE sizes the resistance coils from a heating load in Btu/h, then divides by 3,412. A cooling rule of thumb is not that heating load. ACCA Manual J is the load calculation DOE tells you to insist on."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. DOE sizes the resistance coils from a heating load in Btu/h, then divides by 3,412. A cooling rule of thumb is not that heating load. ACCA Manual J is the load calculation DOE tells you to insist on."
+      }
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BTU to kW, and What That Means for an Electric Furnace",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "url": "https://hvac-load-calc.com/btu-to-kw.html",
+  "description": "Electric resistance heat is a unit conversion. The furnace size is the heating load you convert, not the cooling rule of thumb.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
 }
 </script>
 </head>
@@ -125,6 +152,7 @@
 <ul>
 <li><a href="index.html#calc">HVAC load calculator</a> — cooling and baseboard tabs, not a furnace selector</li>
 <li><a href="electric-baseboard-watts.html">Baseboard watts, the other resistance-heat page</a></li>
+<li><a href="heat-pump-sizing.html">Heat pump sizing</a> — the heating load this conversion does not invent</li>
 <li><a href="what-does-btu-stand-for.html">What BTU/hr means on the cooling side</a></li>
 <li><a href="topics.html">Topic map</a></li>
 </ul>
@@ -144,7 +172,7 @@
 <p>No. DOE sizes the resistance coils from a heating load in Btu/h, then divides by 3,412. A cooling rule of thumb is not that heating load. ACCA Manual J is the load calculation DOE tells you to insist on.</p>
 </main>
 <footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="mini-split-room-size.html">mini-split guide</a> · <a href="duct-cfm-chart.html">duct CFM</a> · <a href="electric-baseboard-watts.html">baseboard watts</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 <script>
 document.getElementById("kwGo").addEventListener("click", function () {
   var b = parseFloat(document.getElementById("kwBtu").value);

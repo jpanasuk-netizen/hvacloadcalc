@@ -3,63 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What Size Mini-Split Do I Need For Each Room? BTU-by-Room...</title>
+<title>Mini-Split Size by Room, 9k to 36k</title>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
-<meta name="description" content="Mini-split sizing by room: 9k heads for bedrooms, 12k for living rooms, 18k–24k for open plans. Exact BTU math with ceiling, window, sun, and insulation...">
-<link rel="canonical" href="https://hvac-load-calc.com/mini-split-room-size.html">>
+<meta name="description" content="Mini-split sizing by room: 9k heads for bedrooms, 12k for living rooms, and 18k–24k for open plans. Size to the next head.">
+<link rel="canonical" href="https://hvac-load-calc.com/mini-split-room-size.html">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="What Size Mini-Split For Each Room?">
-<meta property="og:description" content="Room-by-room mini-split BTU sizing — 9k to 36k heads matched to real rooms, with the math shown.">
+<meta property="og:title" content="Mini-Split Size by Room, 9k to 36k">
+<meta property="og:description" content="Mini-split sizing by room: 9k heads for bedrooms, 12k for living rooms, and 18k–24k for open plans. Size to the next head.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="assets/styles.css">
+
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What size mini-split for a 12x12 bedroom?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A 144 sq ft bedroom with 8-foot ceilings needs roughly 4,000–5,000 BTU/hr by rule-of-thumb math, and the smallest standard head — 9,000 BTU — covers it with margin. A 9k head is the right answer for nearly any bedroom; going smaller is false economy and going bigger just costs money and dehumidifies worse." }
-    },
-    {
-      "@type": "Question",
-      "name": "Is a 12,000 BTU mini-split enough for a living room?",
-      "acceptedAnswer": { "@type": "Answer", "text": "For a typical 350–500 sq ft living room with 8-foot ceilings and average sun and insulation, yes — 12k is the classic fit. If the room is over 550 sq ft, has tall or vaulted ceilings, big west-facing windows, or weak insulation, step up to 15k or 18k." }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens if a mini-split is oversized?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An oversized mini-split cools the air quickly, then shuts off before it has removed humidity — leaving rooms cold and clammy. Short cycling also wears the compressor. Inverter units modulate, so modest oversizing (10–20%) is tolerable, but more than ~30% above the calculated load is wasted money and comfort." }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "HVAC Load Calculator",
+   "item": "https://hvac-load-calc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "What size mini-split do I need for each room?",
+   "item": "https://hvac-load-calc.com/mini-split-room-size.html"
+  }
+ ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
-{
-  "sources": [
-    {
-      "title": "ACCA Manual J Residential Load Calculation",
-      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
-      "date": "2026-10-02"
-    }
-  ]
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
 <body>
 
@@ -69,8 +47,6 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <a href="index.html#calc">Calculator</a>
     <a href="electric-baseboard-watts.html">Baseboard watts</a>
     <a href="duct-cfm-chart.html">Duct CFM guide</a>
-    <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a>
-    <a href="https://solar-sizer.com/" rel="noopener">SolarSizer ↗</a>
   </nav>
 </header>
 
@@ -119,31 +95,21 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <p>Run your own numbers in the <a href="index.html#calc">HVAC load calculator</a>, then check airflow needs in the <a href="duct-cfm-chart.html">duct CFM guide</a>.</p>
 <p>Why a short cycle feels clammy: <a href="how-does-an-air-conditioner-work.html">how an air conditioner works</a>. What to change before you buy a larger head: <a href="how-to-improve-air-conditioner-efficiency.html">air conditioner efficiency</a>.</p>
+<p>A head that is already old is a different question from a head that is the wrong size: <a href="how-long-do-air-conditioners-last.html">how long air conditioners and mini-splits last</a>. A ductless heat pump still needs a heating load beside the cooling load: <a href="heat-pump-sizing.html">heat pump sizing</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
+<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+</section>
 </main>
 
-<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> · <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<footer>HVACLoadCalc · free HVAC sizing tools · pages may contain affiliate links · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 
 
-<section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">
-<h2>Frequently asked questions</h2>
-<details><summary>Is this calculator free?</summary><p>Yes — free to use, no signup, no email required.</p></details>
-<details><summary>How accurate is the estimate?</summary><p>Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing.</p></details>
-<details><summary>Can I use this on mobile?</summary><p>Yes — the page is fully responsive and works on phones, tablets, and desktop.</p></details>
-</section>
 
-<nav class="seo-nav" aria-label="Related calculators" style="margin-top:2rem;padding:1rem;border-top:1px solid #ccc;font-size:.9rem">
-<strong>More free calculators:</strong><br>
-  <a href="/duct-cfm-chart.html">Duct CFM Calculator &amp; Chart</a>
-  <a href="/electric-baseboard-watts.html">How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</a>
-  <a href="/how-many-btu-per-square-foot.html">How Many BTU Per Square Foot? The 20–30 Rule and Its Adjustments (2026)</a>
-  <a href="/index.html">HVAC Load Calculator [Free] | HVACLoadCalc</a>
-  <a href="/magnet.html">Free Mini-Split BTU Room Chart</a>
-  <a href="/mini-split-room-size.html">What Size Mini-Split Do I Need For Each Room? BTU-by-Room Guide (2026)</a>
-  <a href="/topics.html">Topic map</a>
-  <a href="/what-size-ac-unit-for-1000-sq-ft.html">What Size AC Unit for 1,000 Sq Ft? BTU Math + Ton Chart (2026)</a>
-</nav>
 
 </body>
 </html>

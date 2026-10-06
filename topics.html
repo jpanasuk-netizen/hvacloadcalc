@@ -14,34 +14,28 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"Topic map — HVACLoadCalc","url":"https://hvac-load-calc.com/topics.html","description":"Room-by-room HVAC sizing for DIY mini-split installs."}
 </script>
+
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{"@type": "Question", "name": "Is this calculator free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 free to use, no signup, no email required."}}, {"@type": "Question", "name": "How accurate is the estimate?", "acceptedAnswer": {"@type": "Answer", "text": "Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing."}}, {"@type": "Question", "name": "Can I use this on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 the page is fully responsive and works on phones, tablets, and desktop."}}]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "HVAC Load Calculator",
+   "item": "https://hvac-load-calc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "What HVACLoadCalc is for",
+   "item": "https://hvac-load-calc.com/topics.html"
+  }
+ ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
-{
-  "sources": [
-    {
-      "title": "ACCA Manual J Residential Load Calculation",
-      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
-      "date": "2026-10-02"
-    }
-  ]
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -54,6 +48,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 <main>
 <h1>What HVACLoadCalc is for</h1>
+<p class="magnet-cta" data-magnet-cta="1"><a href="magnet.html">Free BTU room chart — print it, 10 minutes.</a></p>
 <p class="sub">Room-by-room HVAC sizing for DIY mini-split installs.</p>
 <p>Not ACCA Manual J. Oversizing is the #1 DIY mistake; we say so.</p>
 <p>This map lists <strong>pages that exist</strong>. It is not a keyword dump and it does not treat every article as its own niche. The calculator (or the pack) is the hub. Guides sit under one pillar each.</p>
@@ -109,40 +104,24 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="/how-to-improve-air-conditioner-efficiency.html">Air conditioner efficiency</a> — DOE steps, plus a shaded-versus-sunny calculator run.</li>
 <li><a href="/how-to-dispose-of-an-air-conditioner.html">Dispose of an air conditioner</a> — EPA refrigerant recovery before the unit is scrap.</li>
 <li><a href="/btu-to-kw.html">BTU to kW</a> — 3,412 Btu/h per kW, and why that is not a furnace size by itself.</li>
+<li><a href="/how-long-do-air-conditioners-last.html">How long air conditioners last</a> — DOE life spans, and resize instead of copying the old nameplate.</li>
+<li><a href="/heat-pump-sizing.html">Heat pump sizing</a> — heating load versus cooling load, before anyone orders equipment.</li>
 </ul>
 <h2>Sisters</h2>
-<p>Adjacent math lives next door, not here. <a href="https://generator-sizer.com/">GeneratorSizer</a></p>
+<p>Running a central air conditioner on a backup generator is a wattage problem, not a BTU problem. That load belongs on <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
+<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+</section>
 </main>
-<footer>HVACLoadCalc · topical map · published-spec numbers only · <a href="index.html">calculator / home</a> · <a href="magnet.html">printable cheat sheet</a> · pages may contain affiliate links · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
-<script src="assets/magnet-cta.js"></script>
+<footer>HVACLoadCalc · topical map · published-spec numbers only · <a href="index.html">calculator / home</a> · <a href="magnet.html">printable cheat sheet</a> · pages may contain affiliate links · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
 
 
 
-<section class="edu" style="max-width:760px;margin:2rem auto;padding:1rem">
-<h2>Understanding Topic map</h2>
-<p>Oversized AC short-cycles and never dehumidifies. Undersized runs constantly. Topic map requires Manual-J-style load math.</p>
-<p>This tool uses the standard industry formula: it starts from the primary input, applies the safety margin, and rounds up to the next standard size. All intermediate steps are shown on the result card so you can verify the math yourself.</p>
-<p>Common mistakes to avoid: reading only the peak rating instead of continuous rating, forgetting headroom for future expansion, or skipping the duty-cycle assumption.</p>
-</section>
-<section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">
-<h2>Frequently asked questions</h2>
-<details><summary>Is this calculator free?</summary><p>Yes — free to use, no signup, no email required.</p></details>
-<details><summary>How accurate is the estimate?</summary><p>Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing.</p></details>
-<details><summary>Can I use this on mobile?</summary><p>Yes — the page is fully responsive and works on phones, tablets, and desktop.</p></details>
-<details><summary>Where does the math come from?</summary><p>Formulas are shown inline on the result panel so you can verify each step yourself.</p></details>
-</section>
 
-<nav class="seo-nav" aria-label="Related calculators" style="margin-top:2rem;padding:1rem;border-top:1px solid #ccc;font-size:.9rem">
-<strong>More free calculators:</strong><br>
-  <a href="/duct-cfm-chart.html">Duct CFM Calculator &amp; Chart</a>
-  <a href="/electric-baseboard-watts.html">How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</a>
-  <a href="/how-many-btu-per-square-foot.html">How Many BTU Per Square Foot? The 20–30 Rule and Its Adjustments (2026)</a>
-  <a href="/index.html">HVAC Load Calculator [Free] | HVACLoadCalc</a>
-  <a href="/magnet.html">Free Mini-Split BTU Room Chart</a>
-  <a href="/mini-split-room-size.html">What Size Mini-Split Do I Need For Each Room? BTU-by-Room Guide (2026)</a>
-  <a href="/topics.html">Topic map</a>
-  <a href="/what-size-ac-unit-for-1000-sq-ft.html">What Size AC Unit for 1,000 Sq Ft? BTU Math + Ton Chart (2026)</a>
-</nav>
+
 
 </body>
 </html>

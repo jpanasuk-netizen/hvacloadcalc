@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HVAC Load Calculator [Free] | HVACLoadCalc</title>
+<title>HVAC Load Calculator: AC &amp; Mini Split BTU Sizing</title>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <meta property="og:image" content="https://hvac-load-calc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hvac-load-calc.com/assets/og-image.png">
-<meta name="description" content="Use this free HVAC load calculator to size room BTU, mini-splits, duct CFM, and electric baseboard watts with simple load factors.">
-<link rel="canonical" href="https://hvac-load-calc.com/index.html">>
+<meta name="description" content="Free HVAC load calculator: size room BTU for air conditioners and mini-splits, plus duct CFM and electric baseboard watts.">
+<link rel="canonical" href="https://hvac-load-calc.com/index.html">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="HVAC Load Calculator — What Size HVAC Do I Need?">
-<meta property="og:description" content="Room-by-room BTU sizing, mini-split head selection, duct CFM, and electric baseboard watts — Manual-J-inspired rule-of-thumb math, free, no signup.">
+<meta property="og:title" content="HVAC Load Calculator: AC &amp; Mini Split BTU Sizing">
+<meta property="og:description" content="Free HVAC load calculator: size room BTU for air conditioners and mini-splits, plus duct CFM and electric baseboard watts.">
 <meta property="og:url" content="https://hvac-load-calc.com/">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/styles.css">
@@ -29,6 +29,12 @@
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
 </script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"HVAC Load Calculator","url":"https://hvac-load-calc.com","description":"HVAC sizing calculators and Manual-J lite tools.","sameAs":[]}
+</script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,50 +43,62 @@
     {
       "@type": "Question",
       "name": "How many BTU do I need per square foot?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The rule of thumb is 20–30 BTU/hr per square foot of living space, with 25 as a reasonable middle for a typical 8-foot-ceiling room in a moderate climate. Then adjust: sunny rooms +15%, shaded rooms −10%, poor insulation +25%, good insulation −15%, each window adds about 600 BTU/hr, and multiply by ceiling height ÷ 8. Add a 10% safety margin and round up to the nearest 500 BTU." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The rule of thumb is 20–30 BTU/hr per square foot of living space, with 25 as a reasonable middle for a typical 8-foot-ceiling room in a moderate climate. Then adjust: sunny rooms +15%, shaded rooms −10%, poor insulation +25%, good insulation −15%, each window adds about 600 BTU/hr, and multiply by ceiling height ÷ 8. Add a 10% safety margin and round up to the nearest 500 BTU."
+      }
     },
     {
       "@type": "Question",
       "name": "What size mini-split do I need for my room?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard mini-split indoor heads come in 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr sizes. Size to the nearest head at or above your calculated load — roughly 9k for a 300–400 sq ft bedroom, 12k for a 450–550 sq ft living room, 18k for a 750–850 sq ft open area. Don't oversize more than about 30%: an oversized unit short-cycles and dehumidifies poorly." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard mini-split indoor heads come in 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr sizes. Size to the nearest head at or above your calculated load — roughly 9k for a 300–400 sq ft bedroom, 12k for a 450–550 sq ft living room, 18k for a 750–850 sq ft open area. Don't oversize more than about 30%: an oversized unit short-cycles and dehumidifies poorly."
+      }
     },
     {
       "@type": "Question",
       "name": "How do I calculate duct CFM from BTU?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) ≈ 1,111 CFM, which matches the ~400 CFM per ton rule of thumb." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) = 1,111 CFM. The ~400 CFM per ton shorthand is a larger split: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, about 397 CFM per ton."
+      }
     },
     {
       "@type": "Question",
       "name": "How many watts of electric baseboard heat do I need per square foot?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls."
+      }
     }
   ]
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"HVAC Load Calculator","url":"https://hvac-load-calc.com","description":"HVAC sizing calculators and Manual-J lite tools.","sameAs":[]}
-</script>
-
-<script id="sources-data" type="application/json">
 {
-  "sources": [
-    {
-      "title": "ACCA Manual J Residential Load Calculation",
-      "url": "https://www.acca.org/standards/technical-manuals/manual-j",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "ASHRAE Handbook",
-      "url": "https://www.ashrae.org/technical-resources/ashrae-handbook",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "HVAC Load Calculator",
+ "url": "https://hvac-load-calc.com/"
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HVAC Load Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "url": "https://hvac-load-calc.com/",
+  "description": "Room-by-room BTU, mini-split size, duct CFM, and baseboard watts — Manual-J-inspired rule-of-thumb math that shows its work. Free, no signup.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
 </script>
-<meta name="llms.txt" content="https://hvac-load-calc.com/sources.json">
 </head>
 <body>
 
@@ -93,14 +111,12 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <a href="electric-baseboard-watts.html">Baseboard watts</a>
     <a href="duct-cfm-chart.html">Duct CFM guide</a>
     <a href="what-size-ac-unit-for-1000-sq-ft.html">AC for 1,000 sq ft</a>
-    <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a>
-    <a href="https://solar-sizer.com/" rel="noopener">SolarSizer ↗</a>
-    <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc ↗</a>
   </nav>
 </header>
 
 <main>
 <h1>HVAC Load Calculator</h1>
+<p class="magnet-cta" data-magnet-cta="1"><a href="magnet.html">Free BTU room chart — print it, 10 minutes.</a></p>
 <p class="sub">Room-by-room HVAC sizing for DIY mini-split installs.</p>
 <p class="sub">Room-by-room BTU, mini-split size, duct CFM, and baseboard watts — Manual-J-inspired rule-of-thumb math that shows its work. Free, no signup.</p>
 
@@ -108,7 +124,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   <b>Honest label:</b> this is a <strong>rule-of-thumb planning tool</strong>, not a full ACCA Manual J calculation. It uses the standard 20–30 BTU/sq ft baseline with published adjustment factors. Fine for picking equipment size classes and planning — for final equipment selection in extreme climates or unusual homes, have a contractor run a real Manual J.
 </div>
 
-<div class="tabs" role="tablist" aria-label="Calculators">
+<div class="tabs" id="calc" role="tablist" aria-label="Calculators">
   <button role="tab" aria-selected="true" onclick="showTab('tab-btu', this)">Room BTU</button>
   <button role="tab" aria-selected="false" onclick="showTab('tab-ms', this)">Mini-split size</button>
   <button role="tab" aria-selected="false" onclick="showTab('tab-duct', this)">Duct CFM</button>
@@ -319,7 +335,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h3>What size mini-split do I need for my room?</h3>
 <p>Standard mini-split indoor heads come in 9k, 12k, 15k, 18k, 24k, 30k, and 36k BTU/hr sizes. Size to the nearest head at or above your calculated load — roughly 9k for a 300–400 sq ft bedroom, 12k for a 450–550 sq ft living room, 18k for a 750–850 sq ft open area. Don't oversize more than about 30%: an oversized unit short-cycles and dehumidifies poorly.</p>
 <h3>How do I calculate duct CFM from BTU?</h3>
-<p>Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) ≈ 1,111 CFM, which matches the ~400 CFM per ton rule of thumb.</p>
+<p>Use the sensible-heat formula: CFM = BTU/hr ÷ (ΔT × 1.08), where ΔT is the supply-to-return temperature split — about 20°F for cooling. A 24,000 BTU/hr (2-ton) system at ΔT 20 needs 24,000 ÷ (20 × 1.08) = 1,111 CFM. The ~400 CFM per ton shorthand is a larger split: 24,000 ÷ (28 × 1.08) ≈ 794 CFM, about 397 CFM per ton.</p>
 <h3>How many watts of electric baseboard heat do I need per square foot?</h3>
 <p>Plan on 7–10 watts per square foot: 10 W/sq ft for poor insulation, cold climates, or high ceilings; closer to 7 for tight, well-insulated rooms. Convert from BTU/hr with watts = BTU/hr ÷ 3.41. A 12×15 ft bedroom (180 sq ft) typically needs 1,250–1,800 watts, run as one or two baseboard heaters along exterior walls.</p>
 </section>
@@ -369,9 +385,17 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="how-to-improve-air-conditioner-efficiency.html">How to improve air conditioner efficiency</a></li>
 <li><a href="how-to-dispose-of-an-air-conditioner.html">How to dispose of an air conditioner</a></li>
 <li><a href="btu-to-kw.html">BTU to kW, and electric furnace coils</a></li>
+<li><a href="how-long-do-air-conditioners-last.html">How long air conditioners and mini-splits last</a></li>
+<li><a href="heat-pump-sizing.html">Heat pump sizing: heating load versus cooling load</a></li>
 </ul>
 </div>
-<div class="card"><h3><a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a> · <a href="https://solar-sizer.com/" rel="noopener">SolarSizer ↗</a> · <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc ↗</a> · <a href="https://battery-bank-sizer.com/" rel="noopener">Battery Bank Sizer ↗</a></h3><p>Sister calculators from the same network: backup power, solar sizing, welding duty cycles, and battery banks.</p></div>
+<div class="card"><h3>Running central air on a generator</h3><p>A central air conditioner’s starting watts are an electrical load, not a BTU. Size that backup on <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a>.</p></div>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
+<ul><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+</section>
 </main>
 
 <section id="soft-rail" class="panel" aria-label="Related guides and offers" style="margin-top:1.5rem">
@@ -398,11 +422,11 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </section>
 
 
-<footer>HVACLoadCalc · free HVAC sizing tools for homeowners and DIYers · pages may contain affiliate links · estimates are rule-of-thumb and not a substitute for a full ACCA Manual J · <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> · <a href="https://solar-sizer.com/" rel="noopener">SolarSizer</a> · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+<footer>HVACLoadCalc · free HVAC sizing tools for homeowners and DIYers · pages may contain affiliate links · estimates are rule-of-thumb and not a substitute for a full ACCA Manual J · Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
 
-<script src="assets/app.js"></script>
-<script src="assets/monetization.js"></script>
-<script src="assets/magnet-cta.js"></script>
+<script src="assets/app.js" defer></script>
+<script src="assets/monetization.js" defer></script>
+
 
 <div id="amzSticky" hidden aria-hidden="true">
   <a id="amzStickyLink" class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=home+tools&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Shop on Amazon</a>
@@ -411,24 +435,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 
 
-<section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">
-<h2>Frequently asked questions</h2>
-<details><summary>Is this calculator free?</summary><p>Yes — free to use, no signup, no email required.</p></details>
-<details><summary>How accurate is the estimate?</summary><p>Estimates follow industry-standard sizing rules and common safety margins. Always confirm with a licensed professional for final sizing.</p></details>
-<details><summary>Can I use this on mobile?</summary><p>Yes — the page is fully responsive and works on phones, tablets, and desktop.</p></details>
-</section>
 
-<nav class="seo-nav" aria-label="Related calculators" style="margin-top:2rem;padding:1rem;border-top:1px solid #ccc;font-size:.9rem">
-<strong>More free calculators:</strong><br>
-  <a href="/duct-cfm-chart.html">Duct CFM Calculator &amp; Chart</a>
-  <a href="/electric-baseboard-watts.html">How Many Watts of Electric Baseboard Heat Per Square Foot? (2026)</a>
-  <a href="/how-many-btu-per-square-foot.html">How Many BTU Per Square Foot? The 20–30 Rule and Its Adjustments (2026)</a>
-  <a href="/index.html">HVAC Load Calculator [Free] | HVACLoadCalc</a>
-  <a href="/magnet.html">Free Mini-Split BTU Room Chart</a>
-  <a href="/mini-split-room-size.html">What Size Mini-Split Do I Need For Each Room? BTU-by-Room Guide (2026)</a>
-  <a href="/topics.html">Topic map</a>
-  <a href="/what-size-ac-unit-for-1000-sq-ft.html">What Size AC Unit for 1,000 Sq Ft? BTU Math + Ton Chart (2026)</a>
-</nav>
 
 </body>
 </html>

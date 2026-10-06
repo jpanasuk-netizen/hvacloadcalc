@@ -5,7 +5,8 @@
   --okbg:#121a12; --maxw:900px;
 }
 @media (prefers-color-scheme: light){
-  :root{ --bg:#f6f8fa; --card:#ffffff; --fg:#1f2328; --mut:#57606a; --bd:#d0d7de; --acc:#0969da; --okbg:#eaf5ea; }
+  /* #946000 is 4.77:1 on the disclaim tint (#f4f2ed) and 5.02:1 on #f6f8fa. #d29922 was 2.26:1. */
+  :root{ --bg:#f6f8fa; --card:#ffffff; --fg:#1f2328; --mut:#57606a; --bd:#d0d7de; --acc:#0969da; --okbg:#eaf5ea; --warn:#946000; }
 }
 *{margin:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -85,6 +86,8 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bd);color:v
 .affil .tag{margin:0 0 .3rem}
 code{background:var(--card);border:1px solid var(--bd);border-radius:5px;padding:.05rem .3rem;font-size:.9em}
 .answer-box{background:var(--card);border:1px solid var(--ok);border-left:4px solid var(--ok);border-radius:10px;padding:1rem 1.2rem;margin:0 0 1.4rem}
+.magnet-cta{margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid var(--warn);background:rgba(148,96,0,.08);font-size:1.02rem}
+.magnet-cta a{font-weight:700}
 
 
 .btn-amz{display:inline-block;background:var(--card,#1a1a1a);color:var(--fg,#eee);border:1px solid var(--warn,#f5a623);border-radius:8px;padding:.55rem .9rem;font-size:.92rem;text-decoration:none;min-height:44px;line-height:1.4;margin:.2rem}
