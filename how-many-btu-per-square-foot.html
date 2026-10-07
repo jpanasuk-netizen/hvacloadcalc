@@ -39,6 +39,28 @@
  ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How many BTU per square foot do you need?",
+  "url": "https://hvac-load-calc.com/how-many-btu-per-square-foot.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hvac-load-calc.com/how-many-btu-per-square-foot.html"
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-10-07",
+  "author": {
+    "@type": "Organization",
+    "name": "HVAC Load Calculator"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HVAC Load Calculator"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -55,6 +77,7 @@
 
 <main>
 <h1>How many BTU per square foot do you need?</h1>
+<p class="small">Last updated: October 7, 2026</p>
 <p class="sub">This calculator uses 25 BTU/hr per square foot, then ceiling, sun, insulation, and windows.</p>
 
 <div class="answer-box"><strong>Quick answer:</strong> The baseline in this calculator is square footage × 25 BTU/hr. Run the <a href="index.html#calc">calculator</a> for the room.</div>
@@ -108,6 +131,34 @@
 <p class="small">A product search is not a load. <a href="https://www.amazon.com/s?k=window+air+conditioner&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Window air conditioners on Amazon</a> · <a href="https://www.amazon.com/s?k=mini+split&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Mini-splits on Amazon</a></p>
 </div>
 
+<h2>Worked example: the same factors at five sizes</h2>
+<p>Here is the calculator run at five floor areas with an 8 ft ceiling, average sun, average insulation, and a window count that grows with the space. The last two columns are ENERGY STAR's room air conditioner chart for the same area, divided back into BTU/hr per sq ft. Each result links to that example in the calculator.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Example</th><th class="num">Calculator result (BTU/hr)</th><th class="num">BTU/hr per sq ft</th><th class="num">ENERGY STAR room-AC row (BTU/hr)</th><th class="num">ENERGY STAR per sq ft</th></tr>
+<tr><td><a href="what-size-air-conditioner-for-200-sq-ft-room.html">200 sq ft</a>, 2 windows</td><td class="num"><a href="/?tab=room&amp;sqft=200&amp;ht=8&amp;win=2&amp;sun=average&amp;ins=average">7,000</a></td><td class="num">35.0</td><td class="num"><a href="https://www.energystar.gov/products/room_air_conditioners">6,000</a></td><td class="num">30.0</td></tr>
+<tr><td><a href="what-size-air-conditioner-for-500-sq-ft-room.html">500 sq ft</a>, 3 windows</td><td class="num"><a href="/?tab=room&amp;sqft=500&amp;ht=8&amp;win=3&amp;sun=average&amp;ins=average">16,000</a></td><td class="num">32.0</td><td class="num"><a href="https://www.energystar.gov/products/room_air_conditioners">12,000</a></td><td class="num">24.0</td></tr>
+<tr><td><a href="what-size-air-conditioner-for-800-sq-ft.html">800 sq ft</a>, 5 windows</td><td class="num"><a href="/?tab=room&amp;sqft=800&amp;ht=8&amp;win=5&amp;sun=average&amp;ins=average">25,500</a></td><td class="num">31.9</td><td class="num"><a href="https://www.energystar.gov/products/room_air_conditioners">18,000</a></td><td class="num">22.5</td></tr>
+<tr><td><a href="what-size-air-conditioner-for-1200-sq-ft.html">1,200 sq ft</a>, 7 windows</td><td class="num"><a href="/?tab=room&amp;sqft=1200&amp;ht=8&amp;win=7&amp;sun=average&amp;ins=average">38,000</a></td><td class="num">31.7</td><td class="num"><a href="https://www.energystar.gov/products/room_air_conditioners">21,000 or 23,000</a></td><td class="num">17.5 or 19.2</td></tr>
+<tr><td><a href="what-size-air-conditioner-for-1500-sq-ft.html">1,500 sq ft</a>, 9 windows</td><td class="num"><a href="/?tab=room&amp;sqft=1500&amp;ht=8&amp;win=9&amp;sun=average&amp;ins=average">47,500</a></td><td class="num">31.7</td><td class="num"><a href="https://www.energystar.gov/products/room_air_conditioners">24,000 or 30,000</a></td><td class="num">16.0 or 20.0</td></tr>
+</table></div>
+<p>The calculator's per-square-foot figure stays between about 32 and 35 in these examples, because 25 BTU/hr per sq ft is a constant and the window count and 10% margin grow with the space. ENERGY STAR's room chart does not stay constant. It works out to 30 BTU/hr per sq ft at 200 sq ft and falls to 16 to 20 at 1,500 sq ft. So no single per-square-foot number describes the chart. For whole houses, DOE describes one ton (<a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">12,000 Btu</a>) per <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">400 to 500</a> sq ft as an old estimate, which is 24 to 30 BTU/hr per sq ft. DOE also says that in a very efficient house one ton can condition <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">800 to 1,000</a> sq ft, which is 12 to 15 BTU/hr per sq ft. This calculator sits above the old estimate because it adds windows and a margin, so treat its result as a planning ceiling, not a purchase size.</p>
+<h3>How each factor changes 25 BTU/hr per sq ft</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Input</th><th class="num">Multiplier</th><th class="num">Floor-area rate before windows and margin</th></tr>
+<tr><td>Ceiling 9 ft</td><td class="num">× 1.125</td><td class="num">28.12 BTU/hr per sq ft</td></tr>
+<tr><td>Ceiling 10 ft</td><td class="num">× 1.25</td><td class="num">31.25 BTU/hr per sq ft</td></tr>
+<tr><td>Ceiling 12 ft</td><td class="num">× 1.5</td><td class="num">37.50 BTU/hr per sq ft</td></tr>
+<tr><td>Shaded</td><td class="num">× 0.90</td><td class="num">22.50 BTU/hr per sq ft</td></tr>
+<tr><td>Very sunny</td><td class="num">× 1.15</td><td class="num">28.75 BTU/hr per sq ft</td></tr>
+<tr><td>Good insulation</td><td class="num">× 0.85</td><td class="num">21.25 BTU/hr per sq ft</td></tr>
+<tr><td>Poor insulation</td><td class="num">× 1.25</td><td class="num">31.25 BTU/hr per sq ft</td></tr>
+<tr><td>Shaded and good insulation</td><td class="num">× 0.90 × 0.85</td><td class="num">19.12 BTU/hr per sq ft</td></tr>
+<tr><td>Very sunny and poor insulation</td><td class="num">× 1.15 × 1.25</td><td class="num">35.94 BTU/hr per sq ft</td></tr>
+</table></div>
+<p>Windows are not a rate. Each one is a flat 600 BTU/hr, so a window matters more in a small room: two windows add 6 BTU/hr per sq ft to a 200 sq ft room and less than 1 to a 1,500 sq ft space. ENERGY STAR's occupant and kitchen adjustments work the same way, as fixed amounts. <a href="https://www.energystar.gov/products/room_air_conditioners">600</a> BTU/hr per person beyond two is 3 BTU/hr per sq ft at 200 sq ft. The <a href="https://www.energystar.gov/products/room_air_conditioners">4,000</a> BTU/hr kitchen adder is 20 BTU/hr per sq ft at 200 sq ft and about 2.7 at 1,500 sq ft. This calculator has no occupant or cooking input, so add those yourself when they apply.</p>
+<p>Climate is not an input here or on the ENERGY STAR chart. DOE says the ton-per-area estimate "does not take into account local climate and how well a house is sealed and insulated" (<a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">DOE guide</a>). Manual J takes climate from outdoor design conditions in Manual J Tables 1A/1B or ASHRAE weather data (<a href="https://www.acca.org/standards/technical-manuals/manual-j">ACCA</a>). DOE adds that correct sizing matters most in humid climates, where short-cycling leads to poor humidity control (<a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/31318.pdf">DOE fact sheet</a>).</p>
+<h2>Common mistakes with BTU per square foot</h2><ul><li><strong>Treating 25 as a standard.</strong> It is this calculator's constant. The nearest published figure is DOE's old one ton per <a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf">400 to 500</a> sq ft estimate, and DOE says that estimate ignores climate and how well the house is sealed and insulated.</li><li><strong>Using one rate at every size.</strong> ENERGY STAR's room chart is 30 BTU/hr per sq ft at 200 sq ft and 16 to 20 at 1,500 sq ft. A rate that fits a bedroom oversizes a large open space.</li><li><strong>Applying a rate to a kitchen.</strong> Cooking heat is not in the rate. ENERGY STAR adds a flat <a href="https://www.energystar.gov/products/room_air_conditioners">4,000</a> BTU/hr for a unit used in a kitchen.</li><li><strong>Ignoring a vaulted ceiling.</strong> This calculator multiplies by height ÷ 8, so a 12 ft ceiling is × 1.5. ENERGY STAR's chart assumes <a href="https://www.energystar.gov/products/room_air_conditioners">8-foot</a> ceilings and says to consider a unit with a higher CADR above that.</li><li><strong>Sizing central equipment from any per-square-foot rule.</strong> DOE says to insist on documented ACCA Manual J calculations and to select equipment with Manual S (<a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/31318.pdf">DOE fact sheet</a>).</li></ul>
+<h2>Sizes worked out on this site</h2><ul><li><a href="what-size-air-conditioner-for-150-sq-ft-room.html">150 sq ft room</a></li><li><a href="what-size-air-conditioner-for-200-sq-ft-room.html">200 sq ft room</a></li><li><a href="what-size-air-conditioner-for-250-sq-ft-room.html">250 sq ft room</a></li><li><a href="what-size-air-conditioner-for-300-sq-ft-room.html">300 sq ft room</a></li><li><a href="what-size-air-conditioner-for-400-sq-ft-room.html">400 sq ft room</a></li><li><a href="what-size-air-conditioner-for-500-sq-ft-room.html">500 sq ft room</a></li><li><a href="what-size-air-conditioner-for-600-sq-ft.html">600 sq ft</a></li><li><a href="what-size-air-conditioner-for-700-sq-ft.html">700 sq ft</a></li><li><a href="what-size-air-conditioner-for-800-sq-ft.html">800 sq ft</a></li><li><a href="what-size-ac-unit-for-1000-sq-ft.html">1,000 sq ft</a></li><li><a href="what-size-air-conditioner-for-1200-sq-ft.html">1,200 sq ft</a></li><li><a href="what-size-air-conditioner-for-1500-sq-ft.html">1,500 sq ft</a></li><li><a href="what-size-air-conditioner-for-2000-sq-ft.html">2,000 sq ft</a></li><li><a href="what-size-dehumidifier-for-2000-sq-ft.html">Dehumidifier for 2,000 sq ft</a></li><li><a href="/#calc">HVAC load calculator</a></li></ul>
 <div class="disclaim">
 <b>Honest label:</b> rule-of-thumb sizing is a planning estimate, not a substitute for a full ACCA Manual J. Extreme climates and unusual envelopes deserve a real load calculation before you spend thousands.
 </div>
@@ -117,8 +168,8 @@
 
 <section class="sources-section" aria-labelledby="sources-heading">
 <h2 id="sources-heading">Sources & Standards</h2>
-<p>Related standards. These pages describe the publications and do not print the rule-of-thumb factors used in the calculators:</p>
-<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li></ul>
+<p>Related standards and the public sources quoted above. These pages do not print the rule-of-thumb factors used in the calculators; those are this site's own:</p>
+<ul><li><a href="https://www.acca.org/standards/technical-manuals/manual-j" rel="noopener" target="_blank">ACCA Manual J Residential Load Calculation</a></li><li><a href="https://www.ashrae.org/technical-resources/ashrae-handbook" rel="noopener" target="_blank">ASHRAE Handbook</a></li><li><a href="https://www.energystar.gov/products/room_air_conditioners" rel="noopener" target="_blank">ENERGY STAR, Room Air Conditioners</a></li><li><a href="https://www.energy.gov/sites/prod/files/guide_to_home_heating_cooling.pdf" rel="noopener" target="_blank">U.S. Department of Energy, Guide to Home Heating and Cooling</a></li><li><a href="https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/31318.pdf" rel="noopener" target="_blank">U.S. Department of Energy, Right-Size Heating and Cooling Equipment</a></li></ul>
 </section>
 </main>
 
