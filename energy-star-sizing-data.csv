@@ -1,0 +1,25 @@
+table,condition_or_area_sqft,value,unit,note,source_name,source_url,accessed
+Room AC cooling capacity,100 up to 150,5000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,150 up to 250,6000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,250 up to 300,7000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,300 up to 350,8000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,350 up to 400,9000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,400 up to 450,10000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,450 up to 550,12000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,550 up to 700,14000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"700 up to 1,000",18000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"1,000 up to 1,200",21000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"1,200 up to 1,400",23000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"1,400 up to 1,500",24000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"1,500 up to 2,000",30000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC cooling capacity,"2,000 up to 2,500",34000,BTU/h,8 ft ceiling assumed,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC adjustment,Heavily shaded room,-10%,capacity,,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC adjustment,Very sunny room,+10%,capacity,,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC adjustment,Each person beyond two,+600,BTU/h,,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Room AC adjustment,Unit used in a kitchen,"+4,000",BTU/h,,ENERGY STAR Room Air Conditioners,https://www.energystar.gov/products/room_air_conditioners,2026-10-10
+Dehumidifier capacity,"Slightly to moderately damp (50-75% RH); small-medium room (<2,000 sq ft)",20-30,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
+Dehumidifier capacity,"Slightly to moderately damp (50-75% RH); large room (>2,000 sq ft)",30+,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
+Dehumidifier capacity,"Very damp (75-90% RH); small-medium room (<2,000 sq ft)",25-40,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
+Dehumidifier capacity,"Very damp (75-90% RH); large room (>2,000 sq ft)",40+,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
+Dehumidifier capacity,"Wet (90-100% RH); small-medium room (<2,000 sq ft)",30-50,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
+Dehumidifier capacity,"Wet (90-100% RH); large room (>2,000 sq ft)",50+,pints/day,Portable dehumidifier minimum capacity,ENERGY STAR Dehumidifiers,https://www.energystar.gov/products/dehumidifiers,2026-10-10
