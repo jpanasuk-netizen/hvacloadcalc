@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://hvac-load-calc.com/how-many-btu-per-square-foot.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://hvac-load-calc.com/mini-split-room-size.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -210,7 +210,7 @@
 
   <url>
     <loc>https://hvac-load-calc.com/heat-pump-sizing.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -228,13 +228,13 @@
   </url>
   <url>
     <loc>https://hvac-load-calc.com/mini-split-seer2-chart.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hvac-load-calc.com/energy-star-sizing-data.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -249,5 +249,11 @@
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hvac-load-calc.com/best-mini-split-for-cold-climates.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
