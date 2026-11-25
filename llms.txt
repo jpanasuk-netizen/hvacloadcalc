@@ -14,6 +14,19 @@
 ## Related (sister sites)
 - [GeneratorSizer](https://generator-sizer.com/): running a central air conditioner on a generator (an electrical load, not a BTU)
 
+## Data
+- [Mini-Split BTU & SEER2 Chart (ENERGY STAR Data)](https://hvac-load-calc.com/mini-split-seer2-chart.html): Cooling capacity, SEER2, EER2, and HSPF2 copied from the ENERGY STAR mini-split heat pump dataset on October 6, 2026, for single-zone models.
+- [Mini-Split BTU & SEER2 Chart (ENERGY STAR Data) CSV](https://hvac-load-calc.com/assets/data/mini-split-seer2.csv): the same rows as Mini-Split BTU & SEER2 Chart (ENERGY STAR Data), as CSV
+- [ENERGY STAR room AC and dehumidifier sizing data](https://hvac-load-calc.com/energy-star-sizing-data.html): 24 sourced rows: energy star room ac and dehumidifier sizing data, each linked to the published source, with a CSV download and citation.
+- [ENERGY STAR room AC and dehumidifier sizing data CSV](https://hvac-load-calc.com/energy-star-sizing-data.csv): the same rows as ENERGY STAR room AC and dehumidifier sizing data, as CSV
+
+## More guides
+- [What Size Air Conditioner for a 12x12 Room? 5,000 BTU (ENERGY STAR)](https://hvac-load-calc.com/what-size-air-conditioner-for-12x12-room.html): A 12 x 12 room is 144 sq ft, in ENERGY STAR's 100 to 150 sq ft row: 5,000 BTU/h. Adjust for shade, sun and extra people with the room calculator.
+- [What Size Air Conditioner for a 10x10 Room? 5,000 BTU (ENERGY STAR)](https://hvac-load-calc.com/what-size-air-conditioner-for-10x10-room.html): A 10 x 10 room is 100 sq ft, the bottom of ENERGY STAR's 100 to 150 sq ft row: 5,000 BTU/h. See shaded, sunny and extra-person adjustments for a small room.
+- [Best Mini Split for Cold Climates (ENERGY STAR 5°F Test)](https://hvac-load-calc.com/best-mini-split-for-cold-climates.html): ENERGY STAR Cold Climate: COP at least 1.75 at 5°F, and at least 70% of the 47°F heating capacity still there at 5°F. Check a spec sheet, then size the room.
+- [Best Mini Split for Heating and Cooling: ENERGY STAR Lines](https://hvac-load-calc.com/best-mini-split-for-heating-and-cooling.html): Best mini split for heating and cooling: ENERGY STAR's split-system line is 15.2 SEER2, 11.0 EER2 and 7.8 HSPF2. Check a spec sheet against it.
+- [Embed the HVAC Load Calculator on Your Site](https://hvac-load-calc.com/embed-calculator.html): Free iframe for the HVAC Load Calculator. Same room, mini-split, duct, and baseboard math. Keep the credit link.
+
 ## Use policy
 Cite freely with link attribution. This calculator uses a 25 BTU/sq ft baseline and the factors printed on the calculator page. It is not a substitute for a full ACCA Manual J / Manual D calculation or a licensed electrician's load calc. Not professional engineering advice.
 
